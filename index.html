@@ -17,482 +17,551 @@
 </head>
 <body>
 
-    <!-- ===== FLOATING ACTION BUTTONS ===== -->
-    <div class="float-buttons">
-        <div class="float-btn-wrapper">
-            <a href="tel:+919999999999" class="float-btn call-btn" aria-label="Call Us">
-                <i class="fas fa-phone-alt"></i>
-            </a>
-            <span class="float-label">Call</span>
-        </div>
-        <div class="float-btn-wrapper">
-            <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Unani%20treatment" class="float-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <span class="float-label">WhatsApp</span>
-        </div>
-    </div>
-
-    <!-- ===== TOAST CONTAINER (for contact form) ===== -->
-    <div id="toastContainer"></div>
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="#" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 
     <!-- ===== NAVBAR ===== -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-heart-pulse-fill text-success me-2"></i>
-                ALSHIFA
-                <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
-            </a>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-                aria-label="Toggle navigation" id="navToggler">
-                <span class="toggler-icon top-bar"></span>
-                <span class="toggler-icon middle-bar"></span>
-                <span class="toggler-icon bottom-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav.home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav.services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <div class="lang-toggle d-flex gap-3">
-                            <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
-                            <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-heart-pulse-fill text-success me-2"></i>
+            ALSHIFA
+            <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
+        </a>
 
-    <!-- ===== CAROUSEL ===== -->
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <div class="carousel-slide" style="background-image: url('assets/images/herbs.jpg');"></div>
-                <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">UNANI HERBS & MEDICINE</h4>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <div class="carousel-slide" style="background-image: url('assets/images/cupping.jpg');"></div>
-                <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">CUPPING THERAPY</h4>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-slide" style="background-image: url('assets/images/cupping.jpg');"></div>
-                <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">MASSAGE THERAPY</h4>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <!-- Custom Animated Toggler -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+        aria-label="Toggle navigation" id="navToggler">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+             <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <!-- Language Toggle -->
+            <li class="nav-item ms-lg-2">
+                <div class="lang-toggle d-flex gap-3">
+                    <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
+                    <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                </div>
+            </li>
+        </ul>
     </div>
+</div>
+</nav>
 
-    <!-- ===== MARQUEE ===== -->
-    <div class="marquee-wrapper">
-        <div class="marquee-track">
-            <span class="marquee-item"><i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday</span>
-            <span class="marquee-item"><i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00</span>
-            <span class="marquee-item"><i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services</span>
-            <span class="marquee-item"><i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory</span>
-            <span class="marquee-item"><i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations</span>
-            <!-- duplicate for seamless loop -->
-            <span class="marquee-item"><i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday</span>
-            <span class="marquee-item"><i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00</span>
-            <span class="marquee-item"><i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services</span>
-            <span class="marquee-item"><i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory</span>
-            <span class="marquee-item"><i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations</span>
+<!-- ============================================================
+    CAROUSEL
+    ============================================================ -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <div class="carousel-slide" style="background-image: url('assets/images/herbs.jpg');"></div>
+             <!-- Centered Heading -->
+    <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+        UNANI HERBS & MEDICINE
+    </h4>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-slide" style="background-image: url('assets/images/cupping.jpg');"></div>
+       <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+        CUPPING THERAPY
+    </h4>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-slide" style="background-image: url('assets/images/massage.jpg');"></div>
+       <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+        MASSAGE THERAPY
+    </h4>
         </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero-section" id="home">
-        <div class="container bg-light shadow-lg">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
-                    <span class="highlight-badge mb-3"><i class="bi bi-award me-1"></i> <span data-i18n="hero.badge">Welcome To</span></span>
-                    <h1 class="hero-title mt-2"><span data-i18n="hero.title1">Al-Hakeem </span> <span>Unani Medicare Center</span></h1>
-                    <p class="lead mt-3" style="color: #2a3a4a;" data-i18n="hero.desc">
-                        Al Hakeem Unani Medicare Center is an excellent place for treatment of various diseases through Unani Medicine. This center is the vision of top Indian scholars and renowned Unani physicians aimed to provide state of the art, safe and quality health care services. Unani medical system is an important element of traditional AYUSH medicine which is recognized and governed by Ministry of AYUSH, Government of India.
+<!-- ===== MARQUEE / SCROLLING TICKER ===== -->
+<div class="marquee-wrapper">
+    <div class="marquee-track">
+        <!-- First set of items -->
+        <span class="marquee-item">
+            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
+        </span>
+        <!-- Duplicate set (for seamless loop) -->
+        <span class="marquee-item">
+            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
+        </span>
+    </div>
+</div>
+
+
+   
+
+
+<!-- ===== HERO ===== -->
+<section class="hero-section" id="home">
+    <div class="container bg-light shadow-lg">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+                <span class="highlight-badge mb-3"><i class="bi bi-award me-1"></i> <span data-i18n="hero.badge">Welcome To</span></span>
+                <h1 class="hero-title mt-2">
+                    <span data-i18n="hero.title1">Al-Hakeem </span> <span>Unani Medicare Center</span><br />
+                </h1>
+                <p class="lead mt-3" style="color: #2a3a4a;" data-i18n="hero.desc">
+                    Al Hakeem Unani Medicare Center is an excellent place for treatment of various diseases through UnaniMedicine. This center is the vision of top Indian scholars and renowned Unani physicians aimed toprovide state of the art, safe and quality health care services. Unani medical system is an importantelement of traditional AYUSH medicine which is recognized and governed by Ministry of AYUSH,Government of India.
+                </p>
+                <div class="mt-4 mb-4">
+                     <a href="#about" class="btn btn-outline-unani" data-i18n="hero.btn2"><i class="bi bi-info-circle me-2"></i>Learn More</a>
+                </div>
+                   
+            </div>
+            <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <img src="https://www.milifemedicity.com/img/ayurveda_big.jpg" alt="SJUMC Unani Centre" class="hero-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="py-4 bg-white border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                <div class="stat-number" data-i18n="stat1.num">45+</div>
+                <div class="stat-label" data-i18n="stat1.label">Years of Experience</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                <div class="stat-number" data-i18n="stat2.num">10K+</div>
+                <div class="stat-label" data-i18n="stat2.label">Satisfied Patients</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                <div class="stat-number" data-i18n="stat3.num">20+</div>
+                <div class="stat-label" data-i18n="stat3.label">National/International Awards</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+                <div class="stat-number" data-i18n="stat4.num">100%</div>
+                <div class="stat-label" data-i18n="stat4.label">Natural & Safe Treatment</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="py-5">
+    <div class="container bg-unani-soft shadow-lg p-4 rounded-4">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
+                <h2 class="section-title text-dark" data-i18n="about.title">About the Centre</h2>
+                <p class="mt-3 text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p1">
+                    <strong>DR. (Hkm) Alshifa Healthcare Unani Medical Centre</strong> was established in
+                    <strong>2020</strong> in Gulaohi, New Delhi with a mission – to prevent and treat
+                    various disease conditions / health problems through a holistic Unani approach.
+                </p>
+                <p class="text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p2">
+                    Unani medicine uses various natural herbs and therapies with minimal side effects.
+                    The centre provides expert Unani consultation and quality Unani medicines at the
+                    convenience of the patients.
+                </p>
+                <p class="text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p3">
+                    The centre was founded by India's renowned Unani physician
+                    <strong>‘DR. Mohammed Deen’</strong>, who has 15 years of rich experience
+                    and has successfully practiced at Tibia College, Karol Bagh and later at Majidia Hospital,
+                    Jamia Hamdard, New Delhi.
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
+                <div class="bg-unani-soft p-4 rounded-4 shadow-sm">
+                    <h5 class="fw-bold text-success"><i class="bi bi-quote"></i> <span data-i18n="about.quoteTitle">Our Mission</span></h5>
+                    <p class="fst-italic" style="font-size: 1.05rem;" data-i18n="about.quote">
+                        “With the philanthropic intent of continuous service to society, they are building a healthy India
+                        by integrating their Unani medical knowledge with modern medical science.”
                     </p>
-                    <div class="mt-4 mb-4">
-                        <a href="#about" class="btn btn-outline-unani" data-i18n="hero.btn2"><i class="bi bi-info-circle me-2"></i>Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                    <img src="https://www.milifemedicity.com/img/ayurveda_big.jpg" alt="Unani Centre" class="hero-img" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== STATS ===== -->
-    <section class="py-4 bg-white border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-                    <div class="stat-number" data-i18n="stat1.num">45+</div>
-                    <div class="stat-label" data-i18n="stat1.label">Years of Experience</div>
-                </div>
-                <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
-                    <div class="stat-number" data-i18n="stat2.num">10K+</div>
-                    <div class="stat-label" data-i18n="stat2.label">Satisfied Patients</div>
-                </div>
-                <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
-                    <div class="stat-number" data-i18n="stat3.num">20+</div>
-                    <div class="stat-label" data-i18n="stat3.label">National/International Awards</div>
-                </div>
-                <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
-                    <div class="stat-number" data-i18n="stat4.num">100%</div>
-                    <div class="stat-label" data-i18n="stat4.label">Natural & Safe Treatment</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="py-5">
-        <div class="container bg-unani-soft shadow-lg p-4 rounded-4">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
-                    <h2 class="section-title text-dark" data-i18n="about.title">About the Centre</h2>
-                    <p class="mt-3 text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p1">
-                        <strong>DR. (Hkm) Alshifa Healthcare Unani Medical Centre</strong> was established in
-                        <strong>2020</strong> in Gulaohi, New Delhi with a mission – to prevent and treat
-                        various disease conditions / health problems through a holistic Unani approach.
-                    </p>
-                    <p class="text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p2">
-                        Unani medicine uses various natural herbs and therapies with minimal side effects.
-                        The centre provides expert Unani consultation and quality Unani medicines at the
-                        convenience of the patients.
-                    </p>
-                    <p class="text-dark" style="font-size: 1.08rem; line-height: 1.8;" data-i18n="about.p3">
-                        The centre was founded by India's renowned Unani physician
-                        <strong>‘DR. Mohammed Deen’</strong>, who has 15 years of rich experience
-                        and has successfully practiced at Tibia College, Karol Bagh and later at Majidia Hospital,
-                        Jamia Hamdard, New Delhi.
-                    </p>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
-                    <div class="bg-unani-soft p-4 rounded-4 shadow-sm">
-                        <h5 class="fw-bold text-success"><i class="bi bi-quote"></i> <span data-i18n="about.quoteTitle">Our Mission</span></h5>
-                        <p class="fst-italic" style="font-size: 1.05rem;" data-i18n="about.quote">
-                            “With the philanthropic intent of continuous service to society, they are building a healthy India
-                            by integrating their Unani medical knowledge with modern medical science.”
-                        </p>
-                        <hr />
-                        <div class="d-flex flex-wrap gap-2 mt-3">
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag1">Hepatobiliary</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag2">Respiratory Diseases</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag3">Skin Diseases</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag4">Arthritis</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag5">Neuropsychiatric</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag6">Digestive Disorders</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag7">Kidney & Urinary Tract</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag8">Sexual Disorders</span></span>
-                            <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag9">Lifestyle Diseases</span></span>
-                        </div>
+                    <hr />
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag1">Hepatobiliary</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag2">Respiratory Diseases</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag3">Skin Diseases</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag4">Arthritis</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag5">Neuropsychiatric</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag6">Digestive Disorders</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag7">Kidney & Urinary Tract</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag8">Sexual Disorders</span></span>
+                        <span class="service-tag"><i class="bi bi-check-circle-fill me-1"></i> <span data-i18n="tag9">Lifestyle Diseases</span></span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center pt-5" data-i18n="services.title">Our <span>Services</span></h2>
-            <p class="text-center text-dark mb-4" style="max-width: 1080px; font-size: 25px; margin: 0 auto;" data-i18n="services.sub">
-                We provide specialized Unani treatments for a wide range of health conditions. Our expert physicians use natural herbs and traditional therapies for safe and effective healing.
-            </p>
-            <div class="row g-4 pb-5 px-3" id="servicesContainer">
-                <!-- Rendered by JS -->
-            </div>
+<!-- ===== SERVICES ===== -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center pt-5" data-i18n="services.title">Our <span>Services</span></h2>
+        <p class="text-center text-dark mb-4" style="max-width: 1080px; font-size: 25px; margin-left: auto; margin-right: auto;" data-i18n="services.sub">
+            We provide specialized Unani treatments for a wide range of health conditions. Our expert physicians use natural herbs and traditional therapies for safe and effective healing.
+        </p>
+        <div class="row g-4 pb-5 px-3" id="servicesContainer">
+            <!-- Rendered by JS -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== DOCTORS ===== -->
-    <section id="doctors" class="py-5 bg-unani-soft">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="doctors.title">Our <span class="highlight">Expert Doctors</span></h2>
-            <p class="text-center text-dark mb-4 mt-3" style="max-width: 680px; margin: 0 auto; font-size: 1.6rem;" data-i18n="doctors.sub">
-                The team of experienced and qualified Unani practitioners at Alshifa Health Care  is dedicated to your health.
-            </p>
-            <div class="row g-4" id="doctorContainer">
-                <!-- Rendered by JS -->
-            </div>
+<!-- ===== DOCTORS ===== -->
+<section id="doctors" class="py-5 bg-unani-soft">
+    <div class="container">
+        <h2 class="section-title text-center" data-i18n="doctors.title">Our <span class="highlight">Expert Doctors</span></h2>
+        <p class="text-center text-dark mb-4 mt-3" style="max-width: 680px; margin-left: auto; margin-right: auto; font-size: 1.6rem;" data-i18n="doctors.sub">
+            The team of experienced and qualified Unani practitioners at Alshifa Health Care  is dedicated to your health.
+        </p>
+        <div class="row g-4" id="doctorContainer">
+            <!-- Rendered by JS -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== WHY UNANI ===== -->
-    <section id="why-unani" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="why.title">Why <span class="highlight">Unani</span> Care?</h2>
-            <div class="row g-4 mt-2">
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="0">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-shield-plus"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c1t">Strengthening Immunity</h5>
-                        <p class="text-muted" data-i18n="why.c1d">Unani medicine boosts the body's natural immunity.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="100">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-flower1"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c2t">Minimal / No Side Effects</h5>
-                        <p class="text-muted" data-i18n="why.c2d">Based on natural herbs, safe and effective.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="200">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-emoji-heart-eyes"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c3t">Mental-Physical Wellbeing</h5>
-                        <p class="text-muted" data-i18n="why.c3d">Holistic approach for complete health.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="300">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-check2-circle"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c4t">Permanent Cure</h5>
-                        <p class="text-muted" data-i18n="why.c4d">Treats the root cause, long-term relief.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="400">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-globe2"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c5t">Trusted in India & Abroad</h5>
-                        <p class="text-muted" data-i18n="why.c5d">Internationally recognized with 45 years of experience.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="500">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-person-heart"></i></div>
-                        <h5 class="fw-bold" data-i18n="why.c6t">Affordable & Accessible</h5>
-                        <p class="text-muted" data-i18n="why.c6d">Affordable traditional Unani medicine for all.</p>
-                    </div>
+<!-- ===== WHY UNANI ===== -->
+<section id="why-unani" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center" data-i18n="why.title">Why <span class="highlight">Unani</span> Care?</h2>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="0">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-shield-plus"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c1t">Strengthening Immunity</h5>
+                    <p class="text-muted" data-i18n="why.c1d">Unani medicine boosts the body's natural immunity.</p>
                 </div>
             </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="100">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-flower1"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c2t">Minimal / No Side Effects</h5>
+                    <p class="text-muted" data-i18n="why.c2d">Based on natural herbs, safe and effective.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="200">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-emoji-heart-eyes"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c3t">Mental-Physical Wellbeing</h5>
+                    <p class="text-muted" data-i18n="why.c3d">Holistic approach for complete health.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="300">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-check2-circle"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c4t">Permanent Cure</h5>
+                    <p class="text-muted" data-i18n="why.c4d">Treats the root cause, long-term relief.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="400">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-globe2"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c5t">Trusted in India & Abroad</h5>
+                    <p class="text-muted" data-i18n="why.c5d">Internationally recognized with 45 years of experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="600" data-aos-delay="500">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-person-heart"></i></div>
+                    <h5 class="fw-bold" data-i18n="why.c6t">Affordable & Accessible</h5>
+                    <p class="text-muted" data-i18n="why.c6d">Affordable traditional Unani medicine for all.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== GALLERY ===== -->
-    <section id="gallery" class="py-5 bg-unani-soft">
-        <div class="container">
+<!-- ===== GALLERY (Regimenal Therapy) ===== -->
+<section id="gallery" class="py-5 bg-unani-soft">
+    <div class="container">
+        <div class="header-row">
             <h2 class="section-title text-center mb-0" data-i18n="gallery.title">
                 Regimenal Therapy <span class="highlight">(Ilaj-bit-Tadbeer)</span>
             </h2>
-            <div class="filter-btn-group mt-5" id="filterButtons">
-                <button class="btn active" data-filter="all" data-i18n="gallery.filterAll">All</button>
-                <button class="btn" data-filter="hijama" data-i18n="gallery.filterHijama">Hijama</button>
-                <button class="btn" data-filter="fasd" data-i18n="gallery.filterFasd">Fasd</button>
-                <button class="btn" data-filter="irsale" data-i18n="gallery.filterIrsale">Irsale Alaq</button>
-                <button class="btn" data-filter="dalk" data-i18n="gallery.filterDalk">Dalk</button>
-                <button class="btn" data-filter="hammam" data-i18n="gallery.filterHammam">Hammam</button>
-                <button class="btn" data-filter="ayurveda" data-i18n="gallery.filterAyurveda">Ayurveda</button>
-            </div>
-            <div class="row g-3 g-sm-4 gallery-grid" id="galleryGrid"></div>
         </div>
-    </section>
 
-    <!-- ===== GALLERY MODAL ===== -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Image</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Filter Buttons -->
+        <div class="filter-btn-group mt-5" id="filterButtons">
+            <button class="btn active" data-filter="all" data-i18n="gallery.filterAll">All</button>
+            <button class="btn" data-filter="hijama" data-i18n="gallery.filterHijama">Hijama</button>
+            <button class="btn" data-filter="fasd" data-i18n="gallery.filterFasd">Fasd</button>
+            <button class="btn" data-filter="irsale" data-i18n="gallery.filterIrsale">Irsale Alaq</button>
+            <button class="btn" data-filter="dalk" data-i18n="gallery.filterDalk">Dalk</button>
+            <button class="btn" data-filter="hammam" data-i18n="gallery.filterHammam">Hammam</button>
+            <button class="btn" data-filter="ayurveda" data-i18n="gallery.filterAyurveda">Ayurveda</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-3 g-sm-4 gallery-grid" id="galleryGrid"></div>
+    </div>
+</section>
+
+<!-- ===== GALLERY MODAL ===== -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="galleryModalLabel">Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Gallery Image" class="img-fluid rounded-3 mb-3" />
+                <p id="modalDescription" class="text-muted"></p>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-unani" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== HIGHLIGHTS ===== -->
+<section id="highlights" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center" data-i18n="highlights.title">Key <span class="highlight">Highlights</span></h2>
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="0">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-person-check"></i></div>
+                    <h6 class="fw-bold" data-i18n="h1.t">45+ Years of Experience</h6>
+                    <p class="small text-muted" data-i18n="h1.d">Rich clinical experience of Prof. Hakim Shakir Jamil.</p>
                 </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="Gallery Image" class="img-fluid rounded-3 mb-3" />
-                    <p id="modalDescription" class="text-muted"></p>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="100">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-people"></i></div>
+                    <h6 class="fw-bold" data-i18n="h2.t">Thousands of Patients Treated</h6>
+                    <p class="small text-muted" data-i18n="h2.d">Indoor & outdoor patients in India and abroad.</p>
                 </div>
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-unani" data-bs-dismiss="modal">Close</button>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="200">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-trophy"></i></div>
+                    <h6 class="fw-bold" data-i18n="h3.t">National & International Awards</h6>
+                    <p class="small text-muted" data-i18n="h3.d">Multiple prestigious awards for outstanding contribution.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="300">
+                <div class="card-unani p-4 text-center">
+                    <div class="card-icon mx-auto"><i class="bi bi-hospital"></i></div>
+                    <h6 class="fw-bold" data-i18n="h4.t">Shaheen Bagh, New Delhi</h6>
+                    <p class="small text-muted" data-i18n="h4.d">Well-equipped centre with modern facilities.</p>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- ===== HIGHLIGHTS ===== -->
-    <section id="highlights" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="highlights.title">Key <span class="highlight">Highlights</span></h2>
-            <div class="row g-4 mt-2">
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="0">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-person-check"></i></div>
-                        <h6 class="fw-bold" data-i18n="h1.t">45+ Years of Experience</h6>
-                        <p class="small text-muted" data-i18n="h1.d">Rich clinical experience of Prof. Hakim Shakir Jamil.</p>
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class=" bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <span class="badge-subtitle">Testimonials</span>
+            <h2 class="section-title" data-i18n="testimonials.title">
+                Patient <span class="highlight">Experiences</span>
+            </h2>
+            <div class="title-divider mx-auto"></div>
+            <p class="text-muted section-sub" data-i18n="testimonials.sub">
+                What our patients have said about our services – read their experiences.
+            </p>
+        </div>
+
+        <!-- Carousel -->
+        <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
+                        <div class="testimonial-card-inner">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                “We met Dr Shamim and Dr Yasir. Both of them are very keen on giving knowledge and sharing their experiences about this therapy. Having very deep knowledge of hijama they gave us some very practical and helpful advice about practicing hijama. Good to see that someone is...”
+                            </p>
+                            <div class="testimonial-author">
+                                <strong>Dr. Suhail Siddiqui</strong>
+                                <span>Patient</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="100">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-people"></i></div>
-                        <h6 class="fw-bold" data-i18n="h2.t">Thousands of Patients Treated</h6>
-                        <p class="small text-muted" data-i18n="h2.d">Indoor & outdoor patients in India and abroad.</p>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
+                        <div class="testimonial-card-inner">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                “The best place to get your hijama, cupping therapy done in the area. Well qualified doctor Dr Yasir and highly proficient team. Highly recommended.”
+                            </p>
+                            <div class="testimonial-author">
+                                <strong>Rameez Raja</strong>
+                                <span>Patient</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="200">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-trophy"></i></div>
-                        <h6 class="fw-bold" data-i18n="h3.t">National & International Awards</h6>
-                        <p class="small text-muted" data-i18n="h3.d">Multiple prestigious awards for outstanding contribution.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="600" data-aos-delay="300">
-                    <div class="card-unani p-4 text-center">
-                        <div class="card-icon mx-auto"><i class="bi bi-hospital"></i></div>
-                        <h6 class="fw-bold" data-i18n="h4.t">Shaheen Bagh, New Delhi</h6>
-                        <p class="small text-muted" data-i18n="h4.d">Well-equipped centre with modern facilities.</p>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
+                        <div class="testimonial-card-inner">
+                            <div class="quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                “Al-Hakeem is one of the well established and advanced equipped Unani medicare center in Mumbai. Doctors are well experienced and very hygiene environment. They are providing many therapies for different diseases like Hijama, Leech therapy etc.”
+                            </p>
+                            <div class="testimonial-author">
+                                <strong>Ehtesham Shaikh</strong>
+                                <span>Patient</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section id="testimonials" class="bg-light py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge-subtitle">Testimonials</span>
-                <h2 class="section-title" data-i18n="testimonials.title">
-                    Patient <span class="highlight">Experiences</span>
-                </h2>
-                <div class="title-divider mx-auto"></div>
-                <p class="text-muted section-sub" data-i18n="testimonials.sub">
-                    What our patients have said about our services – read their experiences.
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="py-5 bg-unani-soft">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="700">
+                <h2 class="section-title" data-i18n="contact.title">Contact Us Today</h2>
+                <p class="lead" style="font-size: 1.1rem;" data-i18n="contact.sub">
+                    First step towards a healthy life – Welcome to SJUMC.
                 </p>
+                <div class="d-flex flex-column gap-2 mt-3">
+                    <div><i class="bi bi-geo-alt-fill text-success me-2"></i> <span data-i18n="contact.addr">Shaheen Bagh, New Delhi, India</span></div>
+                    <div><i class="bi bi-telephone-fill text-success me-2"></i> +91-XXXXXXXXXX</div>
+                    <div><i class="bi bi-envelope-fill text-success me-2"></i> info@unaniwellnesscentre.com</div>
+                </div>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#" class="btn btn-unani"><i class="bi bi-whatsapp me-2"></i><span data-i18n="contact.whatsapp">WhatsApp</span></a>
+                    <a href="#" class="btn btn-outline-unani"><i class="bi bi-calendar-check me-2"></i><span data-i18n="contact.appt">Online Appointment</span></a>
+                </div>
             </div>
-            <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel" data-bs-interval="5000">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-inner">
-                                <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                                <p class="testimonial-text">“We met Dr Shamim and Dr Yasir. Both of them are very keen on giving knowledge and sharing their experiences about this therapy. Having very deep knowledge of hijama they gave us some very practical and helpful advice about practicing hijama. Good to see that someone is...”</p>
-                                <div class="testimonial-author"><strong>Dr. Suhail Siddiqui</strong><span>Patient</span></div>
-                            </div>
+            <div class="col-lg-5" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
+                <div class="bg-white p-4 rounded-4 shadow-sm">
+                    <h5 class="fw-bold text-success" data-i18n="contact.formTitle">Quick Contact</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold" data-i18n="contact.fname">Your Name</label>
+                            <input type="text" class="form-control" placeholder="Full Name" data-i18n-placeholder="contact.fnamePlace" />
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-inner">
-                                <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                                <p class="testimonial-text">“The best place to get your hijama, cupping therapy done in the area. Well qualified doctor Dr Yasir and highly proficient team. Highly recommended.”</p>
-                                <div class="testimonial-author"><strong>Rameez Raja</strong><span>Patient</span></div>
-                            </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold" data-i18n="contact.fmobile">Mobile Number</label>
+                            <input type="tel" class="form-control" placeholder="+91-XXXXXXXXXX" data-i18n-placeholder="contact.fmobilePlace" />
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-inner">
-                                <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                                <p class="testimonial-text">“Al-Hakeem is one of the well established and advanced equipped Unani medicare center in Mumbai. Doctors are well experienced and very hygiene environment. They are providing many therapies for different diseases like Hijama, Leech therapy etc.”</p>
-                                <div class="testimonial-author"><strong>Ehtesham Shaikh</strong><span>Patient</span></div>
-                            </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold" data-i18n="contact.fmsg">Message</label>
+                            <textarea class="form-control" rows="2" placeholder="Your health concern..." data-i18n-placeholder="contact.fmsgPlace"></textarea>
                         </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="py-5 bg-unani-soft">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="700">
-                    <h2 class="section-title" data-i18n="contact.title">Contact Us Today</h2>
-                    <p class="lead" style="font-size: 1.1rem;" data-i18n="contact.sub">
-                        First step towards a healthy life – Welcome to SJUMC.
-                    </p>
-                    <div class="d-flex flex-column gap-2 mt-3">
-                        <div><i class="bi bi-geo-alt-fill text-success me-2"></i> <span data-i18n="contact.addr">Shaheen Bagh, New Delhi, India</span></div>
-                        <div><i class="bi bi-telephone-fill text-success me-2"></i> +91-XXXXXXXXXX</div>
-                        <div><i class="bi bi-envelope-fill text-success me-2"></i> info@unaniwellnesscentre.com</div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="#" class="btn btn-unani"><i class="bi bi-whatsapp me-2"></i><span data-i18n="contact.whatsapp">WhatsApp</span></a>
-                        <a href="#" class="btn btn-outline-unani"><i class="bi bi-calendar-check me-2"></i><span data-i18n="contact.appt">Online Appointment</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
-                    <div class="bg-white p-4 rounded-4 shadow-sm">
-                        <h5 class="fw-bold text-success" data-i18n="contact.formTitle">Quick Contact</h5>
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold" data-i18n="contact.fname">Your Name</label>
-                                <input type="text" id="userName" class="form-control" placeholder="Full Name" data-i18n-placeholder="contact.fnamePlace" />
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold" data-i18n="contact.fmobile">Mobile Number</label>
-                                <input type="tel" id="userPhone" class="form-control" placeholder="+91-XXXXXXXXXX" data-i18n-placeholder="contact.fmobilePlace" />
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold" data-i18n="contact.fmsg">Message</label>
-                                <textarea id="userMessage" class="form-control" rows="2" placeholder="Your health concern..." data-i18n-placeholder="contact.fmsgPlace"></textarea>
-                            </div>
-                            <button type="submit" id="submitBtn" class="btn btn-unani w-100" data-i18n="contact.fsubmit">Send Message</button>
-                        </form>
-                    </div>
+                        <button type="submit" class="btn btn-unani w-100" data-i18n="contact.fsubmit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="500">
-                    <h5 class="text-white fw-bold"><i class="bi bi-heart-pulse-fill me-2"></i>Alshifa Healthcare Clinic</h5>
-                    <p class="small" data-i18n="footer.addr">Alshifa Unani Health Care Hospital <br />Gulaothi, Bulandshahr</p>
-                    <p class="small mb-0" data-i18n="footer.est">Established 2020</p>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500">
+                <h5 class="text-white fw-bold"><i class="bi bi-heart-pulse-fill me-2"></i>Alshifa Healthcare Clinic</h5>
+                <p class="small" data-i18n="footer.addr">Alshifa Unani Health Care Hospital <br />Gulaothi, Bulandshahr</p>
+                <p class="small mb-0" data-i18n="footer.est">Established 2020</p>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <h6 class="text-white" data-i18n="footer.linksTitle">Quick Links</h6>
+                <ul class="list-unstyled small text-white" style="line-height: 2; font-size: 1.04rem;">
+                    <li><a href="#home" data-i18n="footer.l1">Home</a></li>
+                    <li><a href="#about" data-i18n="footer.l2">About</a></li>
+                    <li><a href="#services" data-i18n="footer.l3">Services</a></li>
+                    <li><a href="#contact" data-i18n="footer.l4">Contact Us</a></li>
+                    <li><a href="#gallery" data-i18n="footer.l5">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                <h6 class="text-white" data-i18n="footer.follow">Follow Us</h6>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <h6 class="text-white" data-i18n="footer.linksTitle">Quick Links</h6>
-                    <ul class="list-unstyled small text-white" style="line-height: 2; font-size: 1.04rem;">
-                        <li><a href="#home" data-i18n="footer.l1">Home</a></li>
-                        <li><a href="#about" data-i18n="footer.l2">About</a></li>
-                        <li><a href="#services" data-i18n="footer.l3">Services</a></li>
-                        <li><a href="#contact" data-i18n="footer.l4">Contact Us</a></li>
-                        <li><a href="#gallery" data-i18n="footer.l5">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <h6 class="text-white" data-i18n="footer.follow">Follow Us</h6>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    </div>
-                    <p class="small mt-3 mb-0">&copy; 2026 Alshifa Healthcare Clinic. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
-                </div>
+                <p class="small mt-3 mb-0">&copy; 2026 Alshifa Healthcare Clinic. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
             </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
 
 <!-- ============================================================
     SCRIPTS
@@ -503,7 +572,5 @@
 </script>
 
 <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
 </body>
 </html>
