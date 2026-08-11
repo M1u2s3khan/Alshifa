@@ -378,36 +378,220 @@
         .bg-unani-soft {
             background-color: #eef6f1;
         }
-
-        /* ===== TAGS ===== */
-        .service-tag {
-            background: #eef6f1;
-            padding: 0.45rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--unani-primary);
-            display: inline-block;
-            margin: 0.25rem 0.4rem 0.25rem 0;
-            border: 1px solid rgba(10, 92, 54, 0.12);
-            transition: all 0.3s ease;
+/* srvice card start  */
+ /* ===== SERVICE CARD STYLES ===== */
+        .service-card {
+            background: #ffffff;
+            border-radius: 1.25rem !important;
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: default;
         }
-        .service-tag:hover {
-            background: var(--unani-primary);
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* animated underline on hover */
+        .card-hover-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #198754, #2ecc71);
+            transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-radius: 0 4px 0 0;
+        }
+
+        .service-card:hover .card-hover-line {
+            width: 100%;
+        }
+
+        /* icon wrapper */
+        .service-icon-wrapper {
+            width: 72px;
+            height: 72px;
+            flex-shrink: 0;
+            transition: transform 0.4s ease, background 0.3s ease;
+            background: #f0f7f2;
+            border: 2px solid #e9f5ee;
+        }
+
+        .service-card:hover .service-icon-wrapper {
+            transform: scale(1.04);
+            background: #d4edda;
+            border-color: #198754;
+        }
+
+        .service-icon-wrapper i {
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-icon-wrapper i {
+            transform: scale(1.08);
+        }
+
+        /* image inside icon wrapper */
+        .service-img {
+            width: 72px;
+            height: 72px;
+            object-fit: cover;
+            border: 2px solid #e9f5ee;
+            transition: transform 0.4s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.04);
+            border-color: #198754;
+        }
+
+        /* card text */
+        .service-card .card-title {
+            color: #1a2a3a;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card .card-text {
+            line-height: 1.5;
+            font-size: 0.82rem !important;
+            color: #6c7a8a !important;
+        }
+
+        /* section header */
+        .badge-subtitle {
+            background: rgba(25, 135, 84, 0.10);
+            color: #198754;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+        }
+
+        .title-divider {
+            width: 64px;
+            height: 3.5px;
+            background: linear-gradient(90deg, #198754, #2ecc71);
+            border-radius: 4px;
+            margin: 0.75rem auto 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: #1a2a3a;
+        }
+
+        .section-title .highlight {
+            color: #198754;
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(25, 135, 84, 0.18);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        /* CTA button */
+        .btn-unani {
+            background: #198754;
+            color: #fff;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-unani:hover {
+            background: #0f6b42;
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(10, 92, 54, 0.15);
-        }
-        .highlight-badge {
-            background: var(--unani-secondary);
-            color: #1e2a3a;
-            padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: inline-block;
+            box-shadow: 0 12px 28px -8px rgba(25, 135, 84, 0.35) !important;
         }
 
+        /* background */
+        .bg-unani-soft {
+            background: #f6fbf8;
+            position: relative;
+        }
+
+        .bg-unani-soft::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 10% 20%, rgba(25, 135, 84, 0.02) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .bg-unani-soft .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* responsive */
+        @media (max-width: 576px) {
+            .service-icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+            .service-img {
+                width: 60px;
+                height: 60px;
+            }
+            .service-card .card-title {
+                font-size: 0.9rem;
+            }
+            .service-card .card-text {
+                font-size: 0.75rem !important;
+            }
+            .service-card .d-flex {
+                padding: 0.75rem !important;
+            }
+            .service-card .ms-3 {
+                margin-left: 0.75rem !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .service-card .d-flex {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            .service-card .flex-grow-1 {
+                margin-left: 0 !important;
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+            .service-icon-wrapper {
+                margin: 0 auto;
+            }
+            .service-img {
+                margin: 0 auto;
+            }
+        }
+
+        /* AOS overrides */
+        [data-aos] {
+            pointer-events: none;
+        }
+        [data-aos].aos-animate {
+            pointer-events: auto;
+        }
+/* service card close  */
         /* ===== DOCTOR CARDS ===== */
         .doctor-card .card-img-top {
             width: 120px;
