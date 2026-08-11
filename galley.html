@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+   <!-- Include FontAwesome (if not already) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+   
+
+    <!-- ===== NAVBAR ===== -->
+   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-heart-pulse-fill text-success me-2"></i>
+            ALSHIFA
+            <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
+        </a>
+
+        <!-- Custom Animated Toggler -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+        aria-label="Toggle navigation" id="navToggler">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+             <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <!-- Language Toggle -->
+            <li class="nav-item ms-lg-2">
+                <div class="lang-toggle d-flex gap-3">
+                    <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
+                    <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+
+<section class="position-relative w-100 overflow-hidden" style="height: 400px;">
+    <img src="https://www.unaniplus.com/wp-content/uploads/2025/06/27138-1.jpg" 
+         alt="Unani hospital" 
+         class="w-100 h-100 object-fit-cover">
+    
+    <!-- Dark Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+    
+    <!-- Centered Heading -->
+    <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+      Contact Us
+    </h4>
+</section>
+    <!-- ===== MARQUEE / SCROLLING TICKER ===== -->
+<div class="marquee-wrapper">
+    <div class="marquee-track">
+        <!-- First set of items -->
+        <span class="marquee-item">
+            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
+        </span>
+        <!-- Duplicate set (for seamless loop) -->
+        <span class="marquee-item">
+            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
+        </span>
+        <span class="marquee-item">
+            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
+        </span>
+    </div>
+</div>
+
+<!-- ===== GALLERY (Regimenal Therapy) ===== -->
+<section id="gallery" class="py-5 bg-unani-soft">
+    <div class="container">
+        <div class="header-row">
+            <h2 class="section-title text-center mb-0" data-i18n="gallery.title">
+                Regimenal Therapy <span class="highlight">(Ilaj-bit-Tadbeer)</span>
+            </h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-btn-group mt-5" id="filterButtons">
+            <button class="btn active" data-filter="all" data-i18n="gallery.filterAll">All</button>
+            <button class="btn" data-filter="hijama" data-i18n="gallery.filterHijama">Hijama</button>
+            <button class="btn" data-filter="fasd" data-i18n="gallery.filterFasd">Fasd</button>
+            <button class="btn" data-filter="irsale" data-i18n="gallery.filterIrsale">Irsale Alaq</button>
+            <button class="btn" data-filter="dalk" data-i18n="gallery.filterDalk">Dalk</button>
+            <button class="btn" data-filter="hammam" data-i18n="gallery.filterHammam">Hammam</button>
+            <button class="btn" data-filter="ayurveda" data-i18n="gallery.filterAyurveda">Ayurveda</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-3 g-sm-4 gallery-grid" id="galleryGrid"></div>
+    </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500">
+                <h5 class="text-white fw-bold"><i class="bi bi-heart-pulse-fill me-2"></i>Alshifa Healthcare Clinic</h5>
+                <p class="small" data-i18n="footer.addr">Alshifa Unani Health Care Hospital <br />Gulaothi, Bulandshahr</p>
+                <p class="small mb-0" data-i18n="footer.est">Established 2020</p>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <h6 class="text-white" data-i18n="footer.linksTitle">Quick Links</h6>
+                <ul class="list-unstyled small text-white" style="line-height: 2; font-size: 1.04rem;">
+                    <li><a href="#home" data-i18n="footer.l1">Home</a></li>
+                    <li><a href="#about" data-i18n="footer.l2">About</a></li>
+                    <li><a href="#services" data-i18n="footer.l3">Services</a></li>
+                    <li><a href="#contact" data-i18n="footer.l4">Contact Us</a></li>
+                    <li><a href="#gallery" data-i18n="footer.l5">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                <h6 class="text-white" data-i18n="footer.follow">Follow Us</h6>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                </div>
+                <p class="small mt-3 mb-0">&copy; 2026 Alshifa Healthcare Clinic. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- ============================================================
+    SCRIPTS
+    ============================================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
