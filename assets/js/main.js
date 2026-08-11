@@ -236,11 +236,7 @@
         'tag8': { hi: 'यौन विकार', en: 'Sexual Disorders' },
         'tag9': { hi: 'जीवनशैली रोग', en: 'Lifestyle Diseases' },
 
-        // ---- SERVICES ----
-        'services.title': { hi: 'हमारी <span class="highlight">सेवाएँ</span>', en: 'Our <span class="highlight">Services</span>' },
-        'services.sub': { hi: 'हम कई तरह की स्वास्थ्य समस्याओं के लिए खास यूनानी इलाज देते हैं। हमारे एक्सपर्ट डॉक्टर सुरक्षित और असरदार इलाज के लिए प्राकृतिक जड़ी-बूटियों और पारंपरिक तरीकों का इस्तेमाल करते हैं।',
-            en: 'We provide specialized Unani treatments for a wide range of health conditions. Our expert physicians use natural herbs and traditional therapies for safe and effective healing.' },
-
+      
         // ---- DOCTORS ----
         'doctors.title': { hi: 'हमारे <span class="highlight">विशेषज्ञ चिकित्सक</span>', en: 'Our <span class="highlight">Expert Doctors</span>' },
         'doctors.sub': { hi: 'Alshifa Health Care  में अनुभवी एवं योग्य उनानी चिकित्सकों की टीम आपके स्वास्थ्य के लिए समर्पित है।',
@@ -354,100 +350,7 @@
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4vLiam9_EkzYNnCpJP9W-mwznKexslyCU42TtsXNJAVn3y2PpmE-Gb6Oa&s=10'
     }];
 
-    // UPDATED SERVICES DATA WITH IMAGES
-            // --------------------------------------------------------------
-        const SERVICES_DATA = [
-            {
-                img:"assets/images/skin.jpg",
-                color: 'primary',
-                title_hi: 'त्वचा की समस्याएँ',
-                title_en: 'Skin Problems',
-                desc_hi: 'एक्जिमा, सोरायसिस, मुँहासे, खुजली, दाद, और अन्य त्वचा संबंधी विकारों का उनानी जड़ी-बूटियों से उपचार।',
-                desc_en: 'Treatment for eczema, psoriasis, acne, itching, ringworm, and other skin disorders using Unani herbs.',
-            },
-            {
-                 img:"assets/images/sexual.jpg",
-                color: 'danger',
-                title_hi: 'यौन दुर्बलता',
-                title_en: 'Sexual Weakness',
-                desc_hi: 'पुरुषों में यौन शक्ति की कमी, शीघ्रपतन, और अन्य यौन समस्याओं का प्राकृतिक उपचार।',
-                desc_en: 'Natural treatment for male sexual weakness, premature ejaculation, and other sexual issues.',
-            },
-            {
-                 img:"assets/images/weight.jpg",
-                color: 'success',
-                title_hi: 'वजन घटाना',
-                title_en: 'Weight Loss',
-                desc_hi: 'उनानी औषधियों और आहार-विज्ञान के माध्यम से सुरक्षित एवं प्रभावी वजन घटाने की योजना।',
-                desc_en: 'Safe and effective weight loss plan through Unani medicines and dietary guidance.',
-            },
-            {
-                 img:"assets/images/general.jpg",
-                color: 'warning',
-                title_hi: 'सामान्य कमज़ोरी',
-                title_en: 'General Weakness',
-                desc_hi: 'शारीरिक और मानसिक थकावट, कमज़ोरी, और ऊर्जा की कमी को दूर करने के लिए उनानी टॉनिक।',
-                desc_en: 'Unani tonics to overcome physical and mental fatigue, weakness, and lack of energy.',
-            },
-            {
-                img:"assets/images/liver.jpg",
-                color: 'info',
-                title_hi: 'फैटी लीवर / पाचन समस्याएँ',
-                title_en: 'Fatty Liver / Digestion Issues',
-                desc_hi: 'लीवर की समस्याएँ, अपच, एसिडिटी, कब्ज, और पाचन तंत्र के अन्य विकारों का उपचार।',
-                desc_en: 'Treatment for liver problems, indigestion, acidity, constipation, and other digestive disorders.',
-            },
-            {
-                 img:"assets/images/hair.jpg",
-                color: 'secondary',
-                title_hi: 'बालों का झड़ना',
-                title_en: 'Hair Fall',
-                desc_hi: 'बालों के झड़ने, पतले होने, और रूसी के लिए उनानी हर्बल उपचार।',
-                desc_en: 'Unani herbal remedies for hair fall, thinning, and dandruff.',
-            },
-            {
-                 img:"assets/images/hairskin.jpg",
-                color: 'pink',
-                title_hi: 'बाल और त्वचा देखभाल',
-                title_en: 'Hair & Skin Care',
-                desc_hi: 'बालों और त्वचा की समग्र देखभाल के लिए प्राकृतिक उनानी नुस्ख़े और उपचार।',
-                desc_en: 'Natural Unani formulations and treatments for overall hair and skin care.',
-            },
-            {
-                 img:"assets/images/migrane.jpg",
-                color: 'dark',
-                title_hi: 'माइग्रेन / सिरदर्द',
-                title_en: 'Migraine / Headache',
-                desc_hi: 'माइग्रेन, तनाव सिरदर्द, और अन्य सिरदर्द के लिए उनानी दवाएं और इलाज-बित-तदबीर।',
-                desc_en: 'Unani medicines and regimenal therapies for migraine, tension headaches, and other headaches.',
-            },
-            {
-                img:"assets/images/pain.jpg",
-                color: 'warning',
-                title_hi: 'जोड़ों का दर्द',
-                title_en: 'Joint Pain',
-                desc_hi: 'गठिया, ऑस्टियोआर्थराइटिस, और जोड़ों के अन्य दर्दों के लिए उनानी उपचार।',
-                desc_en: 'Unani treatment for arthritis, osteoarthritis, and other joint pains.',
-            },
-            {
-                img:"assets/images/backpain.jpg",
-                color: 'danger',
-                title_hi: 'पीठ दर्द',
-                title_en: 'Back Pain',
-                desc_hi: 'पीठ के निचले हिस्से, ऊपरी हिस्से, और कमर दर्द के लिए उनानी थेरेपी।',
-                desc_en: 'Unani therapy for lower back, upper back, and lumbar pain.',
-            },
-            {
-                img:"assets/images/sciatica.jpg",
-                color: 'primary',
-                title_hi: 'सायटिका',
-                title_en: 'Sciatica',
-                desc_hi: 'सायटिका तंत्रिका दर्द, जांघ और पैरों में दर्द के लिए विशेष उनानी इलाज।',
-                desc_en: 'Special Unani treatment for sciatic nerve pain, thigh and leg pain.',
-            }
-        ];
-
-
+   
     
     // ============================================================
     // 3. STATE
@@ -482,26 +385,6 @@
             `).join('');
         if (window.AOS) AOS.refresh();
     }
-
-    function renderServices() {
-        const container = document.getElementById('servicesContainer');
-        if (!container) return;
-        container.innerHTML = SERVICES_DATA.map((s, idx) => `
-                <div class="col-md-6 col-lg-3" data-aos="flip-up" data-aos-duration="600" data-aos-delay="${idx * 80}">
-                    <div class="card-unani p-3 shadow-lg rounded-3 border-0 h-auto">
-                        <div class="d-flex align-items-center gap-3 mb-2">
-                        <img style="width: 70px; height: 70px; object-fit: cover;" src="${s.img || 'https://via.placeholder.com/50'}" alt="${currentLang === 'hi' ? s.title_hi : s.title_en}" class="service-img rounded-circle" onerror="this.src='https://via.placeholder.com/50'">
-                            <h6 class="fw-bold mb-0 text-danger">${currentLang === 'hi' ? s.title_hi : s.title_en}</h6>
-                        </div>
-                        <p class="text-dark large mb-0">${currentLang === 'hi' ? s.desc_hi : s.desc_en}</p>
-                    </div>
-                </div>
-            `).join('');
-        if (window.AOS) AOS.refresh();
-    }
-
-    
-
     
     // ============================================================
     // 6. LANGUAGE SWITCH
@@ -532,7 +415,6 @@
 
         // Re-render dynamic sections
         renderDoctors();
-        renderServices();
         renderGallery(currentFilter);
 
         // HTML lang
