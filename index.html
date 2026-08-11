@@ -10,10 +10,439 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- Include FontAwesome (if not already) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== GALLERY OVERRIDES ===== */
+        .filter-btn.active {
+            background-color: #198754 !important;
+            color: #fff !important;
+            border-color: #198754 !important;
+        }
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            background-color: #198754 !important;
+            color: #fff !important;
+            border-color: #198754 !important;
+        }
+        .gallery-card .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-card .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+        }
+        .gallery-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-card .card-title {
+            font-size: 1.05rem;
+        }
+        .gallery-card .card-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .badge-subtitle {
+            display: inline-block;
+            background: rgba(25, 135, 84, 0.12);
+            color: #198754;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+        }
+        .title-divider {
+            width: 60px;
+            height: 3px;
+            background: #198754;
+            border-radius: 4px;
+        }
+        .section-sub {
+            font-size: 1.05rem;
+            color: #6c757d;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gallery-filters .btn {
+            font-size: 0.9rem;
+            padding: 0.4rem 1.2rem;
+        }
+        @media (max-width: 576px) {
+            .gallery-filters .btn {
+                font-size: 0.78rem;
+                padding: 0.3rem 0.9rem;
+            }
+        }
 
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            background: #25d366;
+            color: #fff;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .whatsapp-float:hover {
+            color: #fff;
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar-brand small {
+            display: block;
+            font-size: 0.6rem;
+            font-weight: 400;
+            color: #6c757d;
+            letter-spacing: 0.3px;
+        }
+        .custom-toggler {
+            border: none;
+            padding: 0.4rem 0.6rem;
+        }
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+        .toggler-icon {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: #1a2a3a;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin: 5px 0;
+        }
+        .custom-toggler[aria-expanded="true"] .top-bar {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .custom-toggler[aria-expanded="true"] .middle-bar {
+            opacity: 0;
+        }
+        .custom-toggler[aria-expanded="true"] .bottom-bar {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .lang-toggle .btn {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            border: 1px solid #dee2e6;
+            color: #333;
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .lang-toggle .btn.active-lang {
+            background: #198754;
+            color: #fff;
+            border-color: #198754;
+        }
+        .lang-toggle .btn:hover:not(.active-lang) {
+            background: #f0f0f0;
+        }
+
+        /* ===== CAROUSEL ===== */
+        .carousel-slide {
+            height: 72vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .carousel-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+        .carousel-item h4 {
+            z-index: 2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            letter-spacing: 2px;
+            font-size: clamp(1.6rem, 5vw, 4rem);
+        }
+
+        /* ===== MARQUEE ===== */
+        .marquee-wrapper {
+            background: #1a2a3a;
+            color: #fff;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .marquee-track {
+            display: inline-flex;
+            animation: scrollMarquee 28s linear infinite;
+        }
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 28px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        .marquee-item i {
+            color: #4caf84;
+            font-size: 1.1rem;
+        }
+        @keyframes scrollMarquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero-section .container {
+            border-radius: 24px;
+            padding: 2.8rem 2.5rem;
+        }
+        .highlight-badge {
+            display: inline-block;
+            background: rgba(25, 135, 84, 0.12);
+            color: #198754;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+        }
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            color: #1a2a3a;
+            line-height: 1.2;
+        }
+        .hero-title span:last-child {
+            color: #198754;
+        }
+        .hero-img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+        }
+        .btn-outline-unani {
+            border: 2px solid #198754;
+            color: #198754;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-outline-unani:hover {
+            background: #198754;
+            color: #fff;
+        }
+
+        /* ===== STATS ===== */
+        .stat-item {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #198754;
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 0.95rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #1a2a3a;
+        }
+        .section-title .highlight {
+            color: #198754;
+        }
+        .bg-unani-soft {
+            background: #f0f7f2;
+        }
+
+        /* ===== SERVICE TAGS ===== */
+        .service-tag {
+            background: #fff;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #1a2a3a;
+            border: 1px solid #d4e6d8;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .service-tag i {
+            color: #198754;
+        }
+
+        /* ===== CARDS (Unani) ===== */
+        .card-unani {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .card-unani:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+        }
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(25, 135, 84, 0.10);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #198754;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-carousel {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            padding: 1rem 0.5rem;
+        }
+        .testimonial-card-inner {
+            background: #fff;
+            padding: 2rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        .quote-icon {
+            font-size: 2.6rem;
+            color: #198754;
+            opacity: 0.25;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2a3a4a;
+            font-style: italic;
+        }
+        .testimonial-author {
+            margin-top: 1.2rem;
+        }
+        .testimonial-author strong {
+            display: block;
+            font-size: 1rem;
+            color: #1a2a3a;
+        }
+        .testimonial-author span {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-carousel .carousel-indicators {
+            bottom: -3.2rem;
+        }
+        .testimonial-carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            margin: 0 5px;
+        }
+        .testimonial-carousel .carousel-indicators button.active {
+            background: #198754;
+        }
+        .testimonial-carousel .carousel-control-prev,
+        .testimonial-carousel .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            opacity: 1;
+        }
+        .testimonial-carousel .carousel-control-prev-icon,
+        .testimonial-carousel .carousel-control-next-icon {
+            filter: invert(0.3);
+        }
+
+        /* ===== CONTACT ===== */
+        .btn-unani {
+            background: #198754;
+            color: #fff;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-unani:hover {
+            background: #0f6b42;
+            color: #fff;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0f1a24;
+            color: #cbd5e0;
+            padding: 2.8rem 0 1.8rem;
+        }
+        .footer a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e0;
+            font-size: 1.1rem;
+            transition: all 0.25s;
+        }
+        .social-link:hover {
+            background: #198754;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,67 +452,58 @@
     </a>
 
     <!-- ===== NAVBAR ===== -->
-   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
-    <div class="container">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-            <i class="bi bi-heart-pulse-fill text-success me-2"></i>
-            ALSHIFA
-            <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
-        </a>
-
-        <!-- Custom Animated Toggler -->
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-        aria-label="Toggle navigation" id="navToggler">
-        <span class="toggler-icon top-bar"></span>
-        <span class="toggler-icon middle-bar"></span>
-        <span class="toggler-icon bottom-bar"></span>
-    </button>
-
-    <!-- Nav Links -->
-    <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-             <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-            <!-- Language Toggle -->
-            <li class="nav-item ms-lg-2">
-                <div class="lang-toggle d-flex gap-3">
-                    <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
-                    <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
-                </div>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-heart-pulse-fill text-success me-2"></i>
+                ALSHIFA
+                <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+            aria-label="Toggle navigation" id="navToggler">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                <li class="nav-item ms-lg-2">
+                    <div class="lang-toggle d-flex gap-3">
+                        <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
+                        <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </nav>
 
-<!-- ============================================================
-    CAROUSEL
-    ============================================================ -->
+<!-- ===== CAROUSEL ===== -->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
             <div class="carousel-slide" style="background-image: url('assets/images/herbs.jpg');"></div>
-             <!-- Centered Heading -->
-    <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
-        UNANI HERBS & MEDICINE
-    </h4>
+            <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+                UNANI HERBS & MEDICINE
+            </h4>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
             <div class="carousel-slide" style="background-image: url('assets/images/cupping.jpg');"></div>
-       <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
-        CUPPING THERAPY
-    </h4>
+            <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+                CUPPING THERAPY
+            </h4>
         </div>
         <div class="carousel-item">
             <div class="carousel-slide" style="background-image: url('assets/images/massage.jpg');"></div>
-       <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
-        MASSAGE THERAPY
-    </h4>
+            <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+                MASSAGE THERAPY
+            </h4>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -96,47 +516,21 @@
     </button>
 </div>
 
-<!-- ===== MARQUEE / SCROLLING TICKER ===== -->
+<!-- ===== MARQUEE ===== -->
 <div class="marquee-wrapper">
     <div class="marquee-track">
-        <!-- First set of items -->
-        <span class="marquee-item">
-            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
-        </span>
-        <!-- Duplicate set (for seamless loop) -->
-        <span class="marquee-item">
-            <i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory
-        </span>
-        <span class="marquee-item">
-            <i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations
-        </span>
+        <span class="marquee-item"><i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday</span>
+        <span class="marquee-item"><i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00</span>
+        <span class="marquee-item"><i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services</span>
+        <span class="marquee-item"><i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory</span>
+        <span class="marquee-item"><i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations</span>
+        <span class="marquee-item"><i class="fas fa-check-circle"></i>&nbsp; Free Consultation Camp Every Saturday</span>
+        <span class="marquee-item"><i class="fas fa-phone"></i>&nbsp; Helpline: 1800-UNANI-00</span>
+        <span class="marquee-item"><i class="fas fa-ambulance"></i>&nbsp; 24x7 Emergency Services</span>
+        <span class="marquee-item"><i class="fas fa-flask"></i>&nbsp; In-House Medicine Laboratory</span>
+        <span class="marquee-item"><i class="fas fa-leaf"></i>&nbsp; 100% Natural &amp; Herbal Formulations</span>
     </div>
 </div>
-
-
-   
-
 
 <!-- ===== HERO ===== -->
 <section class="hero-section" id="home">
@@ -151,9 +545,8 @@
                     Al Hakeem Unani Medicare Center is an excellent place for treatment of various diseases through UnaniMedicine. This center is the vision of top Indian scholars and renowned Unani physicians aimed toprovide state of the art, safe and quality health care services. Unani medical system is an importantelement of traditional AYUSH medicine which is recognized and governed by Ministry of AYUSH,Government of India.
                 </p>
                 <div class="mt-4 mb-4">
-                     <a href="#about" class="btn btn-outline-unani" data-i18n="hero.btn2"><i class="bi bi-info-circle me-2"></i>Learn More</a>
+                    <a href="#about" class="btn btn-outline-unani" data-i18n="hero.btn2"><i class="bi bi-info-circle me-2"></i>Learn More</a>
                 </div>
-                   
             </div>
             <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                 <img src="https://www.milifemedicity.com/img/ayurveda_big.jpg" alt="SJUMC Unani Centre" class="hero-img" />
@@ -311,49 +704,159 @@
     </div>
 </section>
 
-<!-- ===== GALLERY (Regimenal Therapy) ===== -->
-<section id="gallery" class="py-5 bg-unani-soft">
+<!-- ============================================================
+    GALLERY – REGIMENAL THERAPY (Ilaj-bit-Tadbeer)
+    ============================================================ -->
+<section class="py-5 bg-light" id="gallery">
     <div class="container">
-        <div class="header-row">
-            <h2 class="section-title text-center mb-0" data-i18n="gallery.title">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <span class="badge-subtitle"><i class="bi bi-grid-3x3-gap-fill me-1"></i> <span data-i18n="gallery.badge">Gallery</span></span>
+            <h2 class="section-title mt-2" data-i18n="gallery.title">
                 Regimenal Therapy <span class="highlight">(Ilaj-bit-Tadbeer)</span>
             </h2>
+            <div class="title-divider mx-auto"></div>
+            <p class="text-muted section-sub" data-i18n="gallery.sub">
+                Explore our traditional Unani regimenal therapies – each treatment is rooted in centuries of wisdom.
+            </p>
         </div>
 
         <!-- Filter Buttons -->
-        <div class="filter-btn-group mt-5" id="filterButtons">
-            <button class="btn active" data-filter="all" data-i18n="gallery.filterAll">All</button>
-            <button class="btn" data-filter="hijama" data-i18n="gallery.filterHijama">Hijama</button>
-            <button class="btn" data-filter="fasd" data-i18n="gallery.filterFasd">Fasd</button>
-            <button class="btn" data-filter="irsale" data-i18n="gallery.filterIrsale">Irsale Alaq</button>
-            <button class="btn" data-filter="dalk" data-i18n="gallery.filterDalk">Dalk</button>
-            <button class="btn" data-filter="hammam" data-i18n="gallery.filterHammam">Hammam</button>
-            <button class="btn" data-filter="ayurveda" data-i18n="gallery.filterAyurveda">Ayurveda</button>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 gallery-filters">
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn active" data-filter="all" data-i18n="gallery.filterAll">All</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="hijama" data-i18n="gallery.filterHijama">Hijama</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="fasd" data-i18n="gallery.filterFasd">Fasd</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="irsale" data-i18n="gallery.filterIrsale">Irsale Alaq</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="dalk" data-i18n="gallery.filterDalk">Dalk</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="hammam" data-i18n="gallery.filterHammam">Hammam</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="ayurveda" data-i18n="gallery.filterAyurveda">Ayurveda</button>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="row g-3 g-sm-4 gallery-grid" id="galleryGrid"></div>
+        <!-- Cards Grid -->
+        <div class="row g-4" id="galleryGrid">
+            <!-- 1. Hijama Cupping Therapy -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="hijama">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/hijama.png" class="card-img-top" alt="Hijama Cupping Therapy">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item1">Hijama Cupping Therapy</h5>
+                        <p class="card-text small" data-i18n="gallery.desc1">In Hijama, cups are applied on specific points with negative pressure to draw out blood. It improves circulation and relieves pain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Hijama Treatment Session -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="hijama">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/hijama-2.png" class="card-img-top" alt="Hijama Treatment Session">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item2">Hijama Treatment Session</h5>
+                        <p class="card-text small" data-i18n="gallery.desc2">In a professional Hijama session, the patient is placed comfortably and the expert practitioner performs cupping.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Fasd (Venesection) -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="fasd">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/fasad.jpg" class="card-img-top" alt="Fasd Venesection">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item3">Fasd (Venesection)</h5>
+                        <p class="card-text small" data-i18n="gallery.desc3">Fasd involves drawing a specific amount of blood from veins, which reduces blood pressure and inflammation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Fasd Bloodletting -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="fasd">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/fasad-2.jpg" class="card-img-top" alt="Fasd Bloodletting">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item4">Fasd Bloodletting</h5>
+                        <p class="card-text small" data-i18n="gallery.desc4">This ancient Unani technique restores balance by removing excess morbid blood from the body.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Irsale Alaq (Leech Therapy) -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="irsale">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/irsal.jpg" class="card-img-top" alt="Irsale Alaq Leech Therapy">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item5">Irsale Alaq (Leech Therapy)</h5>
+                        <p class="card-text small" data-i18n="gallery.desc5">Medicinal leeches are applied to the affected area; they suck blood and reduce inflammation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Leech Therapy -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="irsale">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/leech.jpg" class="card-img-top" alt="Leech Therapy">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item6">Leech Therapy</h5>
+                        <p class="card-text small" data-i18n="gallery.desc6">Enzymes in leech saliva thin the blood and provide relief from local pain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Dalk (Massage) -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="dalk">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/dalk.jpg" class="card-img-top" alt="Dalk Massage">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item7">Dalk (Massage)</h5>
+                        <p class="card-text small" data-i18n="gallery.desc7">Dalk involves body massage with special oils, which relaxes muscles and improves blood flow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Dalk Oil Massage -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="dalk">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/dalkoil.jpg" class="card-img-top" alt="Dalk Oil Massage">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item8">Dalk Oil Massage</h5>
+                        <p class="card-text small" data-i18n="gallery.desc8">Dalk is highly beneficial for arthritis, back pain and joint stiffness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Hammam (Steam Bath) -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="hammam">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/hammam.jpg" class="card-img-top" alt="Hammam Steam Bath">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item9">Hammam (Steam Bath)</h5>
+                        <p class="card-text small" data-i18n="gallery.desc9">In Hammam, steam opens the pores and expels toxins from the body.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Natool (Shirodhara) – optional extra -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="ayurveda">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/natool.jpg" class="card-img-top" alt="Natool Shirodhara" onerror="this.src='https://via.placeholder.com/400x200/198754/fff?text=Natool'">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item11">Natool (Shirodhara)</h5>
+                        <p class="card-text small" data-i18n="gallery.desc11">In Natool, a stream of oil is poured on the forehead, which calms the brain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Ayurveda Treatment -->
+            <div class="col-lg-3 col-md-4 gallery-card" data-category="ayurveda">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="assets/images/ayurveda.jpg" class="card-img-top" alt="Ayurveda Treatment" onerror="this.src='https://via.placeholder.com/400x200/198754/fff?text=Ayurveda'">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-i18n="gallery.item13">Ayurveda Treatment</h5>
+                        <p class="card-text small" data-i18n="gallery.desc13">Ayurveda focuses on overall health through herbs, oils and Panchakarma therapies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-<!-- ===== GALLERY MODAL ===== -->
-<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <h5 class="modal-title fw-bold" id="galleryModalLabel">Image</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <img id="modalImage" src="" alt="Gallery Image" class="img-fluid rounded-3 mb-3" />
-                <p id="modalDescription" class="text-muted"></p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-unani" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- ===== HIGHLIGHTS ===== -->
 <section id="highlights" class="py-5">
@@ -393,9 +896,8 @@
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" class=" bg-light">
+<section id="testimonials" class="bg-light">
     <div class="container">
-        <!-- Section Header -->
         <div class="text-center mb-5">
             <span class="badge-subtitle">Testimonials</span>
             <h2 class="section-title" data-i18n="testimonials.title">
@@ -407,25 +909,17 @@
             </p>
         </div>
 
-        <!-- Carousel -->
         <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel" data-bs-interval="5000">
-
-            <!-- Indicators -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-
-            <!-- Slides -->
             <div class="carousel-inner">
-                <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
                         <div class="testimonial-card-inner">
-                            <div class="quote-icon">
-                                <i class="bi bi-quote"></i>
-                            </div>
+                            <div class="quote-icon"><i class="bi bi-quote"></i></div>
                             <p class="testimonial-text">
                                 “We met Dr Shamim and Dr Yasir. Both of them are very keen on giving knowledge and sharing their experiences about this therapy. Having very deep knowledge of hijama they gave us some very practical and helpful advice about practicing hijama. Good to see that someone is...”
                             </p>
@@ -436,14 +930,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
                 <div class="carousel-item">
                     <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
                         <div class="testimonial-card-inner">
-                            <div class="quote-icon">
-                                <i class="bi bi-quote"></i>
-                            </div>
+                            <div class="quote-icon"><i class="bi bi-quote"></i></div>
                             <p class="testimonial-text">
                                 “The best place to get your hijama, cupping therapy done in the area. Well qualified doctor Dr Yasir and highly proficient team. Highly recommended.”
                             </p>
@@ -454,14 +944,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 3 -->
                 <div class="carousel-item">
                     <div class="testimonial-card" data-aos="fade-up" data-aos-duration="600">
                         <div class="testimonial-card-inner">
-                            <div class="quote-icon">
-                                <i class="bi bi-quote"></i>
-                            </div>
+                            <div class="quote-icon"><i class="bi bi-quote"></i></div>
                             <p class="testimonial-text">
                                 “Al-Hakeem is one of the well established and advanced equipped Unani medicare center in Mumbai. Doctors are well experienced and very hygiene environment. They are providing many therapies for different diseases like Hijama, Leech therapy etc.”
                             </p>
@@ -473,8 +959,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -570,7 +1054,35 @@
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
 </script>
+<script src="assets/js/main.js">
+</script>
 
-<script src="assets/js/main.js"></script>
+<!-- ===== GALLERY FILTER SCRIPT (vanilla) ===== -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
+        const cards = document.querySelectorAll('#galleryGrid .gallery-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                cards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
