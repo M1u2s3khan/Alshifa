@@ -700,64 +700,22 @@
         font-size: 0.95rem;
     }
 }
-        /* ===== GALLERY ===== */
-        .filter-btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.6rem;
-            margin-bottom: 2rem;
-        }
-        .filter-btn-group .btn {
-            border-radius: 40px;
-            padding: 0.4rem 1.4rem;
-            font-weight: 500;
-            font-size: 0.9rem;
-            background: #fff;
-            border: 1px solid #dce3e0;
-            color: #1e2a3a;
-            transition: all 0.3s ease;
-        }
-        .filter-btn-group .btn:hover {
-            background: var(--unani-primary);
-            color: #fff;
-            border-color: var(--unani-primary);
-            transform: translateY(-2px);
-        }
-        .filter-btn-group .btn.active {
-            background: var(--unani-primary);
-            color: #fff;
-            border-color: var(--unani-primary);
-            box-shadow: 0 6px 18px rgba(10, 92, 54, 0.20);
-        }
-        .gallery-grid .card-unani {
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 16px;
-        }
-        .gallery-grid .card-unani img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .gallery-grid .card-unani:hover img {
-            transform: scale(1.06);
-        }
-        .gallery-grid .card-unani .card-body {
-            padding: 0.8rem 1rem;
-        }
-        .gallery-grid .card-unani .card-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 0;
-            color: var(--unani-primary);
-        }
-        @media (max-width: 576px) {
-            .gallery-grid .card-unani img {
-                height: 160px;
-            }
-        }
+       /* ----- filter buttons ----- */
+       /* Filter buttons – Bootstrap doesn’t have a built‑in "active" pill style */
+.filter-btn-group .btn {
+    border-radius: 50px;
+    padding: 0.4rem 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.filter-btn-group .btn.active-filter {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+.filter-btn-group .btn:hover:not(.active-filter) {
+    background: #f0f0f0;
+}
 
         /* ===== FOOTER ===== */
         .footer {
