@@ -186,6 +186,250 @@
         </div>
     </div>
 </section>
+
+<!-- ===== ACHIEVEMENTS GRID ===== -->
+<section class="py-5 bg-light" id="achievements">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <span class="badge bg-secondary bg-opacity-10 text-secondary text-uppercase small fw-semibold px-3 py-2">Our Achievements</span>
+            <h2 class="display-5 fw-bold mt-2">Shining Stars of Lawrence Academy</h2>
+            <div class="mx-auto my-3" style="width: 60px; height: 3px; background: var(--bs-primary);"></div>
+            <p class="text-muted">Our students consistently bring laurels to the school across various domains.</p>
+        </div>
+
+        <!-- Filter Buttons (with corrected classes) -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 filter-btns">
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn active" data-filter="all">All</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="academic">Academic</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="sports">Sports</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="cultural">Cultural</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="science">Science</button>
+            <button class="btn btn-outline-dark rounded-pill px-4 py-1 filter-btn" data-filter="olympiad">Olympiad</button>
+        </div>
+
+        <!-- Cards Grid (unchanged) -->
+        <div class="row g-4" id="achievementGrid">
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="academic">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Topper" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2024</span>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Academic</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Board Exam District Topper</h5>
+                        <p class="card-text small text-secondary">Secured 98.6% in CBSE Class 12 Board Exams, district topper in Science.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">AP</div>
+                            <div>
+                                <div class="fw-semibold small">Ananya Patel</div>
+                                <div class="text-muted small">Class XII · Science</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="sports">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Sports" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2024</span>
+                        <span class="badge bg-warning text-dark position-absolute bottom-0 start-0 m-2">Sports</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Gold Medal - State Athletics</h5>
+                        <p class="card-text small text-secondary">Won Gold in 100m and 200m sprint at State Level Athletics Championship.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">RK</div>
+                            <div>
+                                <div class="fw-semibold small">Rahul Kumar</div>
+                                <div class="text-muted small">Class XI · Sports</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="cultural">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Cultural" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2024</span>
+                        <span class="badge bg-danger position-absolute bottom-0 start-0 m-2">Cultural</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">1st Prize - National Dance</h5>
+                        <p class="card-text small text-secondary">First position in Classical Dance category at National Level Cultural Fest.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">PS</div>
+                            <div>
+                                <div class="fw-semibold small">Priya Sharma</div>
+                                <div class="text-muted small">Class X · Cultural</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="science">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Science" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2023</span>
+                        <span class="badge bg-info text-dark position-absolute bottom-0 start-0 m-2">Science</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">INSPIRE Science Expo Award</h5>
+                        <p class="card-text small text-secondary">Innovation Award for "Smart Waste Management using IoT" project.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">VG</div>
+                            <div>
+                                <div class="fw-semibold small">Vivek Gupta</div>
+                                <div class="text-muted small">Class XII · Science</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="olympiad">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Olympiad" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2024</span>
+                        <span class="badge bg-dark position-absolute bottom-0 start-0 m-2">Olympiad</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">International Math Olympiad</h5>
+                        <p class="card-text small text-secondary">Gold Medal &amp; All India Rank 12 in IMO 2024.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">AM</div>
+                            <div>
+                                <div class="fw-semibold small">Arjun Mehta</div>
+                                <div class="text-muted small">Class IX · Olympiad</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-lg-3 col-md-4 achievement-item" data-category="academic">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div class="position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HT3mm3YmD0JXfV0tqr7d4TfCkJaPRRxo4c02DH5e5L_ISGn1s0u1K03N&s=10" 
+                             class="card-img-top" alt="Class 10" style="height: 200px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 start-0 m-2">2024</span>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Academic</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Perfect Score - Class 10</h5>
+                        <p class="card-text small text-secondary">100/100 in Mathematics and Science in CBSE Class 10 Board Exams.</p>
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: 700; color: var(--bs-dark);">NK</div>
+                            <div>
+                                <div class="fw-semibold small">Neha Kapoor</div>
+                                <div class="text-muted small">Class X · Academic</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+    /* Filter buttons */
+.filter-btns .filter-btn {
+    border-radius: 50px;
+    padding: 0.4rem 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 2px solid #dee2e6;
+    background: transparent;
+    color: #212529;
+}
+.filter-btns .filter-btn:hover {
+    background: #f0f0f0;
+}
+.filter-btns .filter-btn.active {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+</style>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.achievement-item');
+
+        if (!filterBtns.length || !items.length) return;
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                items.forEach(item => {
+                    const category = item.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = '';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(12px)';
+                        setTimeout(() => {
+                            item.style.transition = 'all 0.4s ease';
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 20);
+                    } else {
+                        item.style.transition = 'all 0.3s ease';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(12px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Trigger the first button to show all items on load
+        const activeBtn = document.querySelector('.filter-btn.active');
+        if (activeBtn) {
+            activeBtn.click();
+        } else {
+            filterBtns[0]?.click();
+        }
+    });
+</script>
+    <style>
+        /* ----- filter buttons ----- */
+       /* Filter buttons – Bootstrap doesn’t have a built‑in "active" pill style */
+.filter-btn-group .btn {
+    border-radius: 50px;
+    padding: 0.4rem 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.filter-btn-group .btn.active-filter {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+.filter-btn-group .btn:hover:not(.active-filter) {
+    background: #f0f0f0;
+}
+
+    </style>
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
