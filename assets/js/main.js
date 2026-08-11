@@ -1,4 +1,3 @@
-
  // ============================================================
     // CONTACT FORM HANDLER — DATA → CONSOLE
     // ============================================================
@@ -312,61 +311,7 @@
         'footer.rights': { hi: 'सर्वाधिकार सुरक्षित।', en: 'All Rights Reserved.' },
 
         // ---- GALLERY ----
-        'gallery.title': { hi: 'रेजिमेनल थेरेपी <span class="highlight">(इलाज-बित-तदबीर)</span>',
-            en: 'Regimenal Therapy <span class="highlight">(Ilaj-bit-Tadbeer)</span>' },
-        'gallery.filterAll': { hi: 'सभी', en: 'All' },
-        'gallery.filterHijama': { hi: 'हिजामा', en: 'Hijama' },
-        'gallery.filterFasd': { hi: 'फ़स्द', en: 'Fasd' },
-        'gallery.filterIrsale': { hi: 'इरसाले अलक़', en: 'Irsale Alaq' },
-        'gallery.filterDalk': { hi: 'दल्क', en: 'Dalk' },
-        'gallery.filterHammam': { hi: 'हम्माम', en: 'Hammam' },
-        'gallery.filterAyurveda': { hi: 'आयुर्वेद', en: 'Ayurveda' },
-        'gallery.item1': { hi: 'हिजामा कपिंग थेरेपी', en: 'Hijama Cupping Therapy' },
-        'gallery.desc1': { hi: 'हिजामा में शरीर के विशेष बिंदुओं पर कप लगाकर नकारात्मक दबाव से रक्त निकाला जाता है। यह रक्त परिसंचरण सुधारता है और दर्द से राहत देता है।',
-            en: 'In Hijama, cups are applied on specific points with negative pressure to draw out blood. It improves circulation and relieves pain.' },
-        'gallery.item2': { hi: 'हिजामा उपचार सत्र', en: 'Hijama Treatment Session' },
-        'gallery.desc2': { hi: 'एक पेशेवर हिजामा सत्र में रोगी को आरामदायक स्थिति में रखा जाता है और विशेषज्ञ चिकित्सक कपिंग करता है।',
-            en: 'In a professional Hijama session, the patient is placed comfortably and the expert practitioner performs cupping.' },
-        'gallery.item3': { hi: 'फ़स्द (वेनिसेक्शन)', en: 'Fasd (Venesection)' },
-        'gallery.desc3': { hi: 'फ़स्द में नसों से कुछ मात्रा में रक्त निकाला जाता है, जिससे रक्तचाप और सूजन कम होती है।',
-            en: 'Fasd involves drawing a specific amount of blood from veins, which reduces blood pressure and inflammation.' },
-        'gallery.item4': { hi: 'फ़स्द रक्त निकालना', en: 'Fasd Bloodletting' },
-        'gallery.desc4': { hi: 'यह प्राचीन उनानी तकनीक शरीर से अतिरिक्त दोषपूर्ण रक्त को निकालकर संतुलन बहाल करती है।',
-            en: 'This ancient Unani technique restores balance by removing excess morbid blood from the body.' },
-        'gallery.item5': { hi: 'इरसाले अलक़ (जोंक थेरेपी)', en: 'Irsale Alaq (Leech Therapy)' },
-        'gallery.desc5': { hi: 'चिकित्सीय जोंकों को प्रभावित क्षेत्र पर लगाया जाता है, जो रक्त चूसती हैं और सूजन कम करती हैं।',
-            en: 'Medicinal leeches are applied to the affected area; they suck blood and reduce inflammation.' },
-        'gallery.item6': { hi: 'जोंक चिकित्सा', en: 'Leech Therapy' },
-        'gallery.desc6': { hi: 'जोंक की लार में मौजूद एंजाइम रक्त को पतला करते हैं और स्थानीय दर्द से राहत देते हैं।',
-            en: 'Enzymes in leech saliva thin the blood and provide relief from local pain.' },
-        'gallery.item7': { hi: 'दल्क (मालिश)', en: 'Dalk (Massage)' },
-        'gallery.desc7': { hi: 'दल्क में विशेष तेलों का उपयोग करके शरीर की मालिश की जाती है, जिससे मांसपेशियाँ ढीली होती हैं।',
-            en: 'Dalk involves body massage with special oils, which relaxes muscles and improves blood flow.' },
-        'gallery.item8': { hi: 'दल्क तेल मालिश', en: 'Dalk Oil Massage' },
-        'gallery.desc8': { hi: 'गठिया, पीठ दर्द और जोड़ों की अकड़न में दल्क अत्यंत लाभकारी है।',
-            en: 'Dalk is highly beneficial for arthritis, back pain and joint stiffness.' },
-        'gallery.item9': { hi: 'हम्माम (भाप स्नान)', en: 'Hammam (Steam Bath)' },
-        'gallery.desc9': { hi: 'हम्माम में भाप के माध्यम से शरीर के छिद्र खुलते हैं और विषाक्त पदार्थ बाहर निकलते हैं।',
-            en: 'In Hammam, steam opens the pores and expels toxins from the body.' },
-        'gallery.item10': { hi: 'हम्माम चिकित्सा', en: 'Hammam Therapy' },
-        'gallery.desc10': { hi: 'श्वसन तंत्र को साफ करने और त्वचा को निखारने के लिए हम्माम थेरेपी प्रभावी है।',
-            en: 'Hammam therapy is effective for clearing the respiratory tract and improving skin complexion.' },
-        'gallery.item11': { hi: 'नतूल (शिरोधारा)', en: 'Natool (Shirodhara)' },
-        'gallery.desc11': { hi: 'नतूल में माथे पर तेल की धारा बहाई जाती है, जो मस्तिष्क को शांत करती है।',
-            en: 'In Natool, a stream of oil is poured on the forehead, which calms the brain.' },
-        'gallery.item12': { hi: 'नतूल तेल धारा', en: 'Natool Oil Stream' },
-        'gallery.desc12': { hi: 'अनिद्रा, सिरदर्द और मानसिक तनाव में नतूल अत्यंत प्रभावी है।',
-            en: 'Natool is highly effective for insomnia, headache and mental stress.' },
-        'gallery.item13': { hi: 'आयुर्वेद उपचार', en: 'Ayurveda Treatment' },
-        'gallery.desc13': { hi: 'आयुर्वेद में जड़ी-बूटियों, तेलों और पंचकर्म के माध्यम से संपूर्ण स्वास्थ्य पर ध्यान दिया जाता है।',
-            en: 'Ayurveda focuses on overall health through herbs, oils and Panchakarma therapies.' },
-        'gallery.item14': { hi: 'आयुर्वेद मालिश', en: 'Ayurveda Massage' },
-        'gallery.desc14': { hi: 'आयुर्वेदिक मालिश शरीर को डिटॉक्स करती है और ऊर्जा स्तर बढ़ाती है।',
-            en: 'Ayurvedic massage detoxifies the body and boosts energy levels.' },
-        'gallery.item15': { hi: 'आयुर्वेद हर्बल थेरेपी', en: 'Ayurveda Herbal Therapy' },
-        'gallery.desc15': { hi: 'आयुर्वेदिक हर्बल थेरेपी में प्राकृतिक जड़ी-बूटियों का उपयोग करके रोगों की जड़ से चिकित्सा की जाती है।',
-            en: 'Ayurvedic herbal therapy treats diseases at their root using natural herbs.' }
-    };
+        };
 
     // ============================================================
     // 2. DATA
@@ -503,24 +448,7 @@
         ];
 
 
-    const GALLERY_ITEMS = [
-        { id: 1, titleKey: 'gallery.item1', descKey: 'gallery.desc1', category: 'hijama', img: 'assets/images/hijama.png' },
-        { id: 2, titleKey: 'gallery.item2', descKey: 'gallery.desc2', category: 'hijama', img: 'assets/images/hijama-2.png' },
-        { id: 3, titleKey: 'gallery.item3', descKey: 'gallery.desc3', category: 'fasd', img: 'assets/images/fasad.jpg' },
-        { id: 4, titleKey: 'gallery.item4', descKey: 'gallery.desc4', category: 'fasd', img: 'assets/images/fasad-2.jpg' },
-        { id: 5, titleKey: 'gallery.item5', descKey: 'gallery.desc5', category: 'irsale', img: 'assets/images/irsal.jpg' },
-        { id: 6, titleKey: 'gallery.item6', descKey: 'gallery.desc6', category: 'irsale', img: 'assets/images/leech.jpg' },
-        { id: 7, titleKey: 'gallery.item7', descKey: 'gallery.desc7', category: 'dalk', img: 'assets/images/dalk.jpg' },
-        { id: 8, titleKey: 'gallery.item8', descKey: 'gallery.desc8', category: 'dalk', img: 'assets/images/dalkoil.jpg' },
-        { id: 9, titleKey: 'gallery.item9', descKey: 'gallery.desc9', category: 'hammam', img: 'assets/images/hammam.jpg' },
-        { id: 10, titleKey: 'gallery.item10', descKey: 'gallery.desc10', category: 'hammam', img: 'assets/images/hammam-2.jpg' },
-        { id: 11, titleKey: 'gallery.item11', descKey: 'gallery.desc11', category: 'ayurveda', img: 'assets/images/natool.jpg' },
-        { id: 12, titleKey: 'gallery.item12', descKey: 'gallery.desc12', category: 'ayurveda', img: 'assets/images/natool_oil.jpg' },
-        { id: 13, titleKey: 'gallery.item13', descKey: 'gallery.desc13', category: 'ayurveda', img: 'assets/images/ayurveda.jpg' },
-        { id: 14, titleKey: 'gallery.item14', descKey: 'gallery.desc14', category: 'ayurveda', img: 'assets/images/ayurveda_massage.jpg' },
-        { id: 15, titleKey: 'gallery.item15', descKey: 'gallery.desc15', category: 'ayurveda', img: 'assets/images/ayurveda_herbal.jpg' }
-    ];
-
+    
     // ============================================================
     // 3. STATE
     // ============================================================
@@ -572,39 +500,9 @@
         if (window.AOS) AOS.refresh();
     }
 
-    function renderGallery(filter) {
-        const grid = document.getElementById('galleryGrid');
-        if (!grid) return;
-        const filtered = filter === 'all' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(item => item.category === filter);
-        grid.innerHTML = filtered.map((item, idx) => `
-                <div class="col-6 col-md-4 col-lg-3 gallery-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="${Math.min(idx * 50, 400)}">
-                    <div class="card-unani" data-bs-toggle="modal" data-bs-target="#galleryModal"
-                         data-img="${item.img}" data-title="${t(item.titleKey)}" data-desc="${t(item.descKey)}">
-                        <img src="${item.img}" class="card-img-top" alt="${t(item.titleKey)}" loading="lazy" onerror="this.src='https://picsum.photos/seed/fallback${item.id}/400/300'">
-                        <div class="card-body shadow-lg" style="background: linear-gradient(115deg, #123c2a, #24734a);">
-                            <h6 class="card-title text-light">${t(item.titleKey)}</h6>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        if (window.AOS) AOS.refresh();
+    
 
-        // Modal click handler
-        document.querySelectorAll('#galleryGrid .card-unani[data-bs-toggle="modal"]').forEach(el => {
-            el.addEventListener('click', function() {
-                document.getElementById('modalImage').src = this.dataset.img;
-                document.getElementById('galleryModalLabel').textContent = this.dataset.title;
-                document.getElementById('modalDescription').textContent = this.dataset.desc;
-            });
-        });
-    }
-
-    function updateFilterButtons(filter) {
-        document.querySelectorAll('#filterButtons .btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === filter);
-        });
-    }
-
+    
     // ============================================================
     // 6. LANGUAGE SWITCH
     // ============================================================
@@ -666,14 +564,7 @@
             setLanguage('en');
         });
 
-        // Filter buttons
-        document.querySelectorAll('#filterButtons .btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                currentFilter = this.dataset.filter;
-                updateFilterButtons(currentFilter);
-                renderGallery(currentFilter);
-            });
-        });
+       
 
         // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -694,4 +585,52 @@
                 if (window.AOS) AOS.refresh();
             }, 250);
         });
+    });
+
+
+    // filter button 
+     document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.achievement-item');
+
+        if (!filterBtns.length || !items.length) return;
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                items.forEach(item => {
+                    const category = item.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = '';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(12px)';
+                        setTimeout(() => {
+                            item.style.transition = 'all 0.4s ease';
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 20);
+                    } else {
+                        item.style.transition = 'all 0.3s ease';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(12px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Trigger the first button to show all items on load
+        const activeBtn = document.querySelector('.filter-btn.active');
+        if (activeBtn) {
+            activeBtn.click();
+        } else {
+            filterBtns[0]?.click();
+        }
     });
