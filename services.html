@@ -17,10 +17,19 @@
 </head>
 <body>
 
-      <!-- ===== WHATSAPP FLOAT ===== -->
-    <a href="#" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+      <!-- ===== FLOATING WHATSAPP & CALL BUTTONS ===== -->
+    <div class="float-buttons">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918882787414" target="_blank" class="float-btn whatsapp-float" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip-text">WhatsApp</span>
+        </a>
+        <!-- Call Button -->
+        <a href="tel:+918882787414" class="float-btn call-float" aria-label="Call us">
+            <i class="fas fa-phone-alt"></i>
+            <span class="tooltip-text">Call Now</span>
+        </a>
+    </div>
 
     <!-- ===== NAVBAR ===== -->
    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
@@ -114,15 +123,223 @@
 </div>
 
 <!-- ===== SERVICES ===== -->
-<section id="services" class="py-5">
+<section id="services" class="py-5 bg-unani-soft overflow-hidden">
     <div class="container">
-        <h2 class="section-title text-center pt-5" data-i18n="services.title">Our <span>Services</span></h2>
-        <p class="text-center text-dark mb-4" style="max-width: 1080px; font-size: 25px; margin-left: auto; margin-right: auto;" data-i18n="services.sub">
-            We provide specialized Unani treatments for a wide range of health conditions. Our expert physicians use natural herbs and traditional therapies for safe and effective healing.
-        </p>
-        <div class="row g-4 pb-5 px-3" id="servicesContainer">
-            <!-- Rendered by JS -->
-            
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="600">
+            <h2 class="section-title mt-2">
+                Our <span class="highlight">Services</span>
+            </h2>
+            <div class="title-divider mx-auto shadow-sm"></div>
+            <p class="text-dark large mb-0" style="font-size: 1.15rem; max-width: 760px; margin: 0.5rem auto 0;">
+                We provide specialized Unani treatments for a wide range of health conditions.
+                Our expert physicians use natural herbs and traditional therapies for safe and effective healing.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 – Skin Problems -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/skin.jpg" alt="Skin Problems" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Skin Problems</h6>
+                            <p class="card-text text-muted small mb-0">Treatment for eczema, psoriasis, acne, itching, ringworm, and other skin disorders using Unani herbs.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 2 – Sexual Weakness -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/sexual.jpg" alt="Sexual Weakness" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Sexual Weakness</h6>
+                            <p class="card-text text-muted small mb-0">Treatment for sexual disorders and weakness using Unani herbs.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 3 – Weight Loss -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/weight.jpg" alt="Weight Loss" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Weight Loss</h6>
+                            <p class="card-text text-muted small mb-0">Safe and effective weight loss plan through Unani medicines and dietary guidance.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 4 – General Weakness -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/general.jpg" alt="General Weakness" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">General Weakness</h6>
+                            <p class="card-text text-muted small mb-0">Unani tonics to overcome physical and mental fatigue, weakness, and lack of energy.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 5 – Fatty Liver / Digestion -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/liver.jpg" alt="Fatty Liver" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Fatty Liver / Digestion Issues</h6>
+                            <p class="card-text text-muted small mb-0">Treatment for liver problems, indigestion, acidity, constipation, and other digestive disorders.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 6 – Hair Fall -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/hair.jpg" alt="Hair Fall" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Hair Fall</h6>
+                            <p class="card-text text-muted small mb-0">Unani herbal remedies for hair fall, thinning, and dandruff.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 7 – Hair & Skin Care -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/hairskin.jpg" alt="Hair & Skin Care" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Hair & Skin Care</h6>
+                            <p class="card-text text-muted small mb-0">Natural Unani formulations and treatments for overall hair and skin care.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 8 – Migraine / Headache -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/migrane.jpg" alt="Migraine" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Migraine / Headache</h6>
+                            <p class="card-text text-muted small mb-0">Unani medicines and regimenal therapies for migraine, tension headaches, and other headaches.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 9 – Joint Pain -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/pain.jpg" alt="Joint Pain" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Joint Pain</h6>
+                            <p class="card-text text-muted small mb-0">Unani treatment for arthritis, osteoarthritis, and other joint pains.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 10 – Back Pain -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/backpain.jpg" alt="Back Pain" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Back Pain</h6>
+                            <p class="card-text text-muted small mb-0">Unani therapy for lower back, upper back, and lumbar pain.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Card 11 – Sciatica -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+                <div class="service-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
+                                <img src="/assets/images/Sciatica.jpg" alt="Sciatica" class="rounded-circle service-img">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h6 class="card-title fw-bold mb-1">Sciatica</h6>
+                            <p class="card-text text-muted small mb-0">Special Unani treatment for sciatic nerve pain, thigh and leg pain.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
+            <a href="#contact" class="btn btn-unani px-5 py-3 rounded-pill fw-semibold shadow-sm">
+                <i class="bi bi-calendar-check me-2"></i> Book an Appointment
+            </a>
         </div>
     </div>
 </section>
