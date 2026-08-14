@@ -39,10 +39,10 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 py-lg-3 sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-heart-pulse-fill text-success me-2"></i>
-                ALSHIFA
-                <small>Alshifa Healthcare Medical Center</small>
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-heart-pulse-fill me-2" style=" color: #FF0000;"></i>
+                ALSHIFA 
+                <small class=""  style=" color: #FF0000; font-weight: 600; font-size: 0.75rem;">Alshifa Unani Healthcare Hospital </small>
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
@@ -54,14 +54,13 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
                     <li class="nav-item ms-lg-2">
                         <div class="lang-toggle d-flex gap-3">
-                            <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
-                            <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                            <button class="btn btn-sm px-3 py-2 " id="" data-lang="en" style="background: #FF0000; color: #fff; font-weight: 600;">Online Consultation</button>
                         </div>
                     </li>
                 </ul>
@@ -413,6 +412,52 @@
             </div>
         </div>
     </section>
+    <!-- services  -->
+     <style>
+    /* ===== SERVICE CARD IMAGE FIX ===== */
+.service-icon-wrapper {
+    width: 72px !important;
+    height: 72px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    border: 2px solid #e8ddd0;
+    background: #f5efe7;
+}
+
+.service-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Mobile pe thoda chhota karo */
+@media (max-width: 575.98px) {
+    .service-icon-wrapper {
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        min-height: 60px !important;
+    }
+
+    .service-card .d-flex {
+        align-items: flex-start !important;
+    }
+
+    .service-card .card-title {
+        font-size: 0.92rem !important;
+    }
+
+    .service-card .card-text {
+        font-size: 0.8rem !important;
+        line-height: 1.45 !important;
+    }
+}
+</style>
+     <!-- services close  -->
 
     <!-- ===== DOCTORS ===== -->
     <section id="doctors" class="py-5 bg-unani-soft overflow-hidden">
@@ -433,10 +478,12 @@
                     <div class="doctor-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center">
                         <div class="card-body p-3 p-md-4">
                             <div class="doctor-avatar-wrapper mx-auto mb-3">
-                                <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto">
-                                    <i class="bi bi-person-fill fs-1 text-white"></i>
-                                </div>
+                            <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrUWAv6aklkoF_43P21B_tseCuoUenImVxDrz6FAyebOgPnZnUvgBo8vs&s=10" 
+                                     alt="Dr. Mohammed Deen" 
+                                     class="w-100 h-100 rounded-circle object-fit-cover">
                             </div>
+                        </div>
                             <h5 class="card-title fw-bold mb-0">Dr. Mohammed Deen</h5>
                             <p class="text-success fw-semibold small mb-2">Founder &amp; Chief Unani Physician</p>
                             <div class="d-flex flex-wrap justify-content-center gap-1 mb-2">
@@ -444,11 +491,11 @@
                                 <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1 small">M.D.</span>
                             </div>
                             <p class="card-text text-muted small mb-3">15+ years of experience. Formerly at Tibia College, Karol Bagh and Majidia Hospital, Jamia Hamdard.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-envelope"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-                            </div>
+     <div class="d-grid">
+    <a href="#contact" class="btn btn-unani btn-sm rounded-pill fw-semibold">
+     Book An Appintment
+    </a>
+</div>
                         </div>
                         <div class="card-hover-line"></div>
                     </div>
@@ -457,11 +504,13 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <div class="doctor-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center">
                         <div class="card-body p-3 p-md-4">
-                            <div class="doctor-avatar-wrapper mx-auto mb-3">
-                                <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto" style="background: linear-gradient(135deg, #0d6efd, #0a58ca);">
-                                    <i class="bi bi-person-fill fs-1 text-white"></i>
-                                </div>
+                             <div class="doctor-avatar-wrapper mx-auto mb-3">
+                            <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNFdw0klUBqZICmLkdg6yVDCg7iNT3-v_Lfr18g-wPdPJVR_-aACMFAw5Y&s=10" 
+                                     alt="Dr. Mohammed Deen" 
+                                     class="w-100 h-100 rounded-circle object-fit-cover">
                             </div>
+                        </div>
                             <h5 class="card-title fw-bold mb-0">Dr. Shamim Ahmed</h5>
                             <p class="text-success fw-semibold small mb-2">Senior Unani Consultant</p>
                             <div class="d-flex flex-wrap justify-content-center gap-1 mb-2">
@@ -469,11 +518,11 @@
                                 <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1 small">M.S.</span>
                             </div>
                             <p class="card-text text-muted small mb-3">Specializes in Hijama, Fasd and Regimenal Therapies. Known for his deep knowledge of traditional healing.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-envelope"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-                            </div>
+                              <div class="d-grid">
+    <a href="#contact" class="btn btn-unani btn-sm rounded-pill fw-semibold">
+     Book An Appintment
+    </a>
+</div>
                         </div>
                         <div class="card-hover-line"></div>
                     </div>
@@ -483,10 +532,12 @@
                     <div class="doctor-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center">
                         <div class="card-body p-3 p-md-4">
                             <div class="doctor-avatar-wrapper mx-auto mb-3">
-                                <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto" style="background: linear-gradient(135deg, #6f42c1, #5a32a3);">
-                                    <i class="bi bi-person-fill fs-1 text-white"></i>
-                                </div>
+                            <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnmLW8iYb_IM3yDWK1NhsJDn5mKOe3oWIy9-cwwiWS_y9P1fFNMv98Z_bB&s=10" 
+                                     alt="Dr. Mohammed Deen" 
+                                     class="w-100 h-100 rounded-circle object-fit-cover">
                             </div>
+                        </div>
                             <h5 class="card-title fw-bold mb-0">Dr. Yasir Ali</h5>
                             <p class="text-success fw-semibold small mb-2">Unani Medicine Specialist</p>
                             <div class="d-flex flex-wrap justify-content-center gap-1 mb-2">
@@ -494,11 +545,11 @@
                                 <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1 small">D.N.B.</span>
                             </div>
                             <p class="card-text text-muted small mb-3">Expert in herbal formulations, lifestyle counselling and chronic disease management with a patient-centric approach.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-envelope"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-                            </div>
+                              <div class="d-grid">
+    <a href="#contact" class="btn btn-unani btn-sm rounded-pill fw-semibold">
+     Book An Appintment
+    </a>
+</div>
                         </div>
                         <div class="card-hover-line"></div>
                     </div>
@@ -508,8 +559,10 @@
                     <div class="doctor-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center">
                         <div class="card-body p-3 p-md-4">
                             <div class="doctor-avatar-wrapper mx-auto mb-3">
-                                <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto" style="background: linear-gradient(135deg, #d63384, #b32b6e);">
-                                    <i class="bi bi-person-fill fs-1 text-white"></i>
+                                <div class="doctor-avatar rounded-circle d-flex align-items-center justify-content-center mx-auto">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgXuZOh9ZxhfZ1xahrbEvmQ-GzWNTblwq1AwbeSw3zT63kUk0qYWJxghO&s=10" 
+                                         alt="Dr. Ayesha Khan" 
+                                         class="w-100 h-100 rounded-circle object-fit-cover">
                                 </div>
                             </div>
                             <h5 class="card-title fw-bold mb-0">Dr. Ayesha Khan</h5>
@@ -519,21 +572,15 @@
                                 <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1 small">M.D.</span>
                             </div>
                             <p class="card-text text-muted small mb-3">Specializes in women's reproductive health, pediatric Unani care and nutritional counselling for families.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-envelope"></i></a>
-                                <a href="#" class="doctor-social rounded-circle d-inline-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-                            </div>
+         <div class="d-grid">
+    <a href="#contact" class="btn btn-unani btn-sm rounded-pill fw-semibold">
+     Book An Appintment
+    </a>
+</div>
                         </div>
                         <div class="card-hover-line"></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350">
-                <a href="#contact" class="btn btn-unani px-4 px-md-5 py-3 rounded-pill fw-semibold shadow-sm">
-                    <i class="bi bi-calendar-check me-2"></i> Book a Consultation
-                </a>
             </div>
         </div>
     </section>
@@ -828,14 +875,6 @@
                         <div><i class="bi bi-telephone-fill text-success me-2"></i> <a href="tel:+919999999999" class="text-decoration-none text-dark">+91-9999999999</a></div>
                         <div><i class="bi bi-envelope-fill text-success me-2"></i> info@unaniwellnesscentre.com</div>
                     </div>
-                    <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20Unani%20services." class="btn btn-unani" target="_blank">
-                            <i class="bi bi-whatsapp me-2"></i>WhatsApp
-                        </a>
-                        <a href="tel:+919999999999" class="btn btn-outline-unani">
-                            <i class="bi bi-telephone me-2"></i>Call Now
-                        </a>
-                    </div>
                     <div class="mt-4 pt-3 border-top">
                         <h6 class="fw-bold"><i class="bi bi-clock text-success me-2"></i>Working Hours</h6>
                         <p class="mb-1"><strong>Mon–Sat:</strong> 9:00 AM – 8:00 PM</p>
@@ -867,13 +906,9 @@
                                 <div class="invalid-feedback">Please write your message.</div>
                             </div>
                             <button type="submit" class="btn btn-unani w-100" id="submitBtn">
-                                <span class="btn-text"><i class="bi bi-whatsapp me-2"></i>Send via WhatsApp</span>
+                                <span class="btn-text"><i class="bi bi-calendar-check me-2"></i>Book Your Appointment</span>
                             </button>
                         </form>
-                        <p class="text-muted small mt-3 mb-0 text-center">
-                            <i class="bi bi-shield-check text-success me-1"></i>
-                            Your information is secure and will not be shared.
-                        </p>
                     </div>
                 </div>
             </div>
