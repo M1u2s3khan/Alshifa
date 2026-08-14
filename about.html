@@ -39,7 +39,7 @@
         <a class="navbar-brand" href="#">
             <i class="bi bi-heart-pulse-fill text-success me-2"></i>
             ALSHIFA
-            <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
+            <small style=" color: #FF0000; font-weight: 600; font-size: 0.75rem;" data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
         </a>
 
         <!-- Custom Animated Toggler -->
@@ -55,15 +55,14 @@
     <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-             <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav.about">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html" data-i18n="nav.services">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+             <li class="nav-item"><a class="nav-link active" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
             <!-- Language Toggle -->
             <li class="nav-item ms-lg-2">
                 <div class="lang-toggle d-flex gap-3">
-                    <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
-                    <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                    <button class="btn btn-sm px-3 py-2 " id="" data-lang="en" style="background: #FF0000; color: #fff; font-weight: 600;">Online Consultation</button>
                 </div>
             </li>
         </ul>
@@ -72,16 +71,23 @@
 </nav>
 
 
-<section class="position-relative w-100 overflow-hidden" style="height: 400px;">
+<!-- ===== About Us ===== -->
+<section class="position-relative w-100 overflow-hidden" 
+         style="height: auto; min-height: auto; max-height: 500px;">
+    
     <img src="https://www.unaniplus.com/wp-content/uploads/2025/06/27138-1.jpg" 
          alt="Unani hospital" 
-         class="w-100 h-100 object-fit-cover">
+         class="w-100 h-auto object-fit-cover">
+
     
-    <!-- Dark Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
-    
-    <!-- Centered Heading -->
-    <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black" 
+         style="opacity: 0.5;"></div>
+
+    <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold text-uppercase m-0 
+               text-center px-3"
+        style="font-size: clamp(1.8rem, 8vw, 4.5rem); 
+               letter-spacing: 0.04em;
+               text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
         About Us
     </h4>
 </section>
