@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="#">
             <i class="bi bi-heart-pulse-fill text-success me-2"></i>
             ALSHIFA
-            <small data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
+            <small style=" color: #FF0000; font-weight: 600; font-size: 0.75rem;" data-i18n="brand.sub">Alshifa Healthcare Medical Center</small>
         </a>
 
         <!-- Custom Animated Toggler -->
@@ -53,16 +53,15 @@
     <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1 gap-lg-2">
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-             <li class="nav-item"><a class="nav-link" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav.about">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html" data-i18n="nav.services">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+             <li class="nav-item"><a class="nav-link active" href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
             <!-- Language Toggle -->
             <li class="nav-item ms-lg-2">
                 <div class="lang-toggle d-flex gap-3">
-                    <button class="btn btn-sm" id="langHi" data-lang="hi">हिंदी</button>
-                    <button class="btn btn-sm active-lang" id="langEn" data-lang="en">English</button>
+                  <button class="btn btn-sm px-3 py-2 " id="" data-lang="en" style="background: #FF0000; color: #fff; font-weight: 600;">Online Consultation</button>
                 </div>
             </li>
         </ul>
@@ -72,7 +71,7 @@
 
 
 <section class="position-relative w-100 overflow-hidden" style="height: 400px;">
-    <img src="https://www.unaniplus.com/wp-content/uploads/2025/06/27138-1.jpg" 
+    <img src="https://www.unaniplus.com/wp-content/uploads/2025/07/4029328_16209-1.jpg" 
          alt="Unani hospital" 
          class="w-100 h-100 object-fit-cover">
     
@@ -81,7 +80,7 @@
     
     <!-- Centered Heading -->
     <h4 class="position-absolute top-50 start-50 translate-middle text-white fw-bold display-4 text-uppercase m-0">
-      Contact Us
+      Services
     </h4>
 </section>
     <!-- ===== MARQUEE / SCROLLING TICKER ===== -->
@@ -143,7 +142,7 @@
                     <div class="d-flex align-items-center p-3">
                         <div class="flex-shrink-0">
                             <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
-                                <img src="/assets/images/skin.jpg" alt="Skin Problems" class="rounded-circle service-img">
+                                <img  src="/assets/images/skin.jpg" alt="Skin Problems" class="rounded-circle service-img">
                             </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
@@ -161,7 +160,7 @@
                     <div class="d-flex align-items-center p-3">
                         <div class="flex-shrink-0">
                             <div class="service-icon-wrapper rounded-circle d-flex align-items-center justify-content-center">
-                                <img src="/assets/images/sexual.jpg" alt="Sexual Weakness" class="rounded-circle service-img">
+                                <img  src="/assets/images/sexual.jpg" alt="Sexual Weakness" class="rounded-circle service-img">
                             </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
@@ -335,14 +334,60 @@
                 </div>
             </div>
         </div>
+<div class="text-center mt-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
+    <button class="btn btn-unani px-5 py-3 rounded-pill fw-semibold shadow-sm" 
+            data-bs-toggle="modal" 
+            data-bs-target="#appointmentModal">
+        <i class="bi bi-calendar-check me-2"></i> Book an Appointment
+    </button>
+</div>
 
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
-            <a href="#contact" class="btn btn-unani px-5 py-3 rounded-pill fw-semibold shadow-sm">
-                <i class="bi bi-calendar-check me-2"></i> Book an Appointment
-            </a>
-        </div>
     </div>
 </section>
+<style>
+    /* ===== SERVICE CARD IMAGE FIX ===== */
+.service-icon-wrapper {
+    width: 72px !important;
+    height: 72px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    border: 2px solid #e8ddd0;
+    background: #f5efe7;
+}
+
+.service-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Mobile pe thoda chhota karo */
+@media (max-width: 575.98px) {
+    .service-icon-wrapper {
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        min-height: 60px !important;
+    }
+
+    .service-card .d-flex {
+        align-items: flex-start !important;
+    }
+
+    .service-card .card-title {
+        font-size: 0.92rem !important;
+    }
+
+    .service-card .card-text {
+        font-size: 0.8rem !important;
+        line-height: 1.45 !important;
+    }
+}
+</style>
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
