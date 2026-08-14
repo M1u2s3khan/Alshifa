@@ -102,6 +102,11 @@ img {
     font-size: 1.3rem;
     color: #1a2a3a;
 }
+.nav-item .nav-link.active {
+    color: black !important;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
 .navbar-brand small {
     display: block;
     font-size: 0.55rem;
