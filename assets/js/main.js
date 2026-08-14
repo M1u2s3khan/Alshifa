@@ -1,57 +1,216 @@
- // ===== INITIALIZE AOS =====
+/* ============================================================
+    main.js – Complete JavaScript
+    ============================================================ */
+
+// ===== INITIALIZE AOS =====
+document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
         duration: 600,
         once: true,
         offset: 80,
         easing: 'ease-out-cubic'
     });
+});
 
-    // ===== WHATSAPP FORM SUBMIT =====
-    // Replace with your actual WhatsApp number (with country code, no '+' sign)
-    const WHATSAPP_NUMBER = '919999999999';
+// ===== WHATSAPP FORM SUBMIT =====
+const WHATSAPP_NUMBER = '919999999999'; // Replace with your actual number
 
-    function sendToWhatsApp(event) {
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
 
-        const name = document.getElementById('formName').value.trim();
-        const phone = document.getElementById('formPhone').value.trim();
-        const message = document.getElementById('formMessage').value.trim();
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        if (!name || !phone || !message) {
-            alert('Please fill all fields before sending.');
-            return;
-        }
+            // Get form values
+            const name = document.getElementById('userName')?.value?.trim() || '';
+            const email = document.getElementById('userEmail')?.value?.trim() || '';
+            const phone = document.getElementById('userPhone')?.value?.trim() || '';
+            const message = document.getElementById('userMessage')?.value?.trim() || '';
 
-        // Build the WhatsApp message
-        const whatsappMsg =
-            `🏥 *Alshifa Healthcare Enquiry*%0A%0A👤 *Name:* ${encodeURIComponent(name)}%0A📞 *Phone:* ${encodeURIComponent(phone)}%0A💬 *Message:* ${encodeURIComponent(message)}%0A%0A📅 *Date:* ${new Date().toLocaleString()}`;
+            // Validate required fields
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields (Name, Email, and Message).');
+                return;
+            }
 
-        const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${whatsappMsg}`;
+            // Build WhatsApp message
+            const msg =
+                `🏥 *Alshifa Healthcare Enquiry*%0A%0A` +
+                `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                `📧 *Email:* ${encodeURIComponent(email)}%0A` +
+                `📞 *Phone:* ${encodeURIComponent(phone || 'Not provided')}%0A` +
+                `💬 *Message:* ${encodeURIComponent(message)}%0A%0A` +
+                `📅 *Date:* ${new Date().toLocaleString()}`;
 
-        // Open WhatsApp in a new tab
-        window.open(url, '_blank');
+            const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${msg}`;
 
-        // Optionally reset form after a moment
-        setTimeout(() => {
-            document.getElementById('contactForm').reset();
-        }, 1000);
+            // Open WhatsApp in new tab
+            window.open(url, '_blank');
+
+            // Reset form after a moment
+            setTimeout(() => {
+                contactForm.reset();
+                // Remove any validation states
+                contactForm.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+            }, 1500);
+        });
+
+        // ===== REAL-TIME VALIDATION =====
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.classList.add('is-invalid');
+                } else {
+                    this.classList.remove('is-invalid');
+                }
+            });
+            input.addEventListener('input', function() {
+                if (this.hasAttribute('required') && this.value.trim()) {
+                    this.classList.remove('is-invalid');
+                }
+            });
+        });
     }
+});
 
-    // ===== GALLERY FILTER =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
-        const cards = document.querySelectorAll('#galleryGrid .gallery-card');
+// ===== GALLERY FILTER =====
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
+    const cards = document.querySelectorAll('#galleryGrid .gallery-card');
 
+    if (filterBtns.length && cards.length) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
+                // Update active button
                 filterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
+
                 const filter = this.dataset.filter;
+
                 cards.forEach(card => {
                     const category = card.dataset.category;
-                    card.style.display = (filter === 'all' || category === filter) ? 'block' :
-                        'none';
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
                 });
             });
         });
+    }
+});
+
+
+// ===== SMOOTH SCROLL FOR NAV LINKS =====
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                const navHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
+});
+
+// ===== NAVBAR COLLAPSE ON LINK CLICK (mobile) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.getElementById('mainNav');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth < 992) {
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                } else {
+                    // Fallback
+                    const collapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    collapse.hide();
+                }
+            }
+        });
+    });
+});
+
+// ===== REFRESH AOS ON RESIZE =====
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        AOS.refresh();
+    }, 250);
+});
+
+console.log('✅ Alshifa Healthcare – All scripts loaded successfully.');
+
+// Bookink appointment 
+ document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('appointmentForm');
+        const modal = document.getElementById('appointmentModal');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止页面刷新
+
+            // 简单验证：检查是否所有字段都已填写
+            const inputs = form.querySelectorAll('[required]');
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false;
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+
+            if (!allFilled) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // 收集数据（仅供演示）
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phoneNumber').value,
+                location: document.getElementById('preferredLocation').value,
+                detail: document.getElementById('consultationDetail').value
+            };
+            console.log('Appointment Data:', formData);
+
+            // 模拟提交成功
+            alert('✅ Your appointment request has been received! We will contact you shortly.');
+
+            // 关闭模态框
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+
+            // 重置表单
+            form.reset();
+            // 移除验证状态
+            inputs.forEach(input => input.classList.remove('is-invalid'));
+        });
+
+        // 当模态框关闭时重置表单（可选）
+        modal.addEventListener('hidden.bs.modal', function() {
+            form.reset();
+            const inputs = form.querySelectorAll('.is-invalid');
+            inputs.forEach(input => input.classList.remove('is-invalid'));
+        });
+    });
+
+    
