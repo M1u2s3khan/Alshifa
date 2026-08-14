@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===== WHATSAPP FORM SUBMIT =====
-const WHATSAPP_NUMBER = '919999999999'; // Replace with your actual number
+const WHATSAPP_NUMBER = '91 8445491054'; // Replace with your actual number
 
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
@@ -158,59 +158,3 @@ window.addEventListener('resize', function() {
 
 console.log('✅ Alshifa Healthcare – All scripts loaded successfully.');
 
-// Bookink appointment 
- document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('appointmentForm');
-        const modal = document.getElementById('appointmentModal');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // 阻止页面刷新
-
-            // 简单验证：检查是否所有字段都已填写
-            const inputs = form.querySelectorAll('[required]');
-            let allFilled = true;
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    allFilled = false;
-                    input.classList.add('is-invalid');
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            });
-
-            if (!allFilled) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // 收集数据（仅供演示）
-            const formData = {
-                fullName: document.getElementById('fullName').value,
-                phone: document.getElementById('phoneNumber').value,
-                location: document.getElementById('preferredLocation').value,
-                detail: document.getElementById('consultationDetail').value
-            };
-            console.log('Appointment Data:', formData);
-
-            // 模拟提交成功
-            alert('✅ Your appointment request has been received! We will contact you shortly.');
-
-            // 关闭模态框
-            const modalInstance = bootstrap.Modal.getInstance(modal);
-            modalInstance.hide();
-
-            // 重置表单
-            form.reset();
-            // 移除验证状态
-            inputs.forEach(input => input.classList.remove('is-invalid'));
-        });
-
-        // 当模态框关闭时重置表单（可选）
-        modal.addEventListener('hidden.bs.modal', function() {
-            form.reset();
-            const inputs = form.querySelectorAll('.is-invalid');
-            inputs.forEach(input => input.classList.remove('is-invalid'));
-        });
-    });
-
-    
